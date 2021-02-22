@@ -1,0 +1,20 @@
+Algoritmo Ejercicio_15
+	Definir A Como Real;
+	Repetir
+	
+		Escribir 'Escribe un numero diferente de 0';
+		Leer A;
+	Hasta Que A <> 0
+		//Leer A;
+	//Mientras A == 0 Hacer
+		//Escribir "vuelve a escribir un numero";
+		//Leer A;
+	//FinMientras
+	Si A mod 2 == 0 Entonces;
+		Escribir A, "es inpar";
+	sino A, 'es impar';
+		
+	FinSi
+	
+	
+FinAlgoritmo

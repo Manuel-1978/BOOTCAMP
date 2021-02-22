@@ -1,0 +1,22 @@
+Algoritmo Ejercicio_28
+	//Desarrollar un timer o temporizador. La cantidad de segundos con la que se quiere hacer la cuenta
+	//atrás se introducirá por teclado. Cuando llegue al final, se imprimirá "¡¡Ring!!“ y el programa
+	//acabará .
+	//• Para parar el flujo del programa en un punto determinado, en PSeInt, se usa Esperar. Por
+	//ejemplo, la instrucción “Esperar 5 Segundos;” esperará en esa línea 5 segundos y luego seguirá.
+	//• Para “limpiar” el output o salida por pantalla, se usa: Limpiar Pantalla;
+	Definir segundoss,milisegundoss,teclado,K Como Entero;
+	Escribir 'Dime los segundos que quiere que suene la alarma';
+	Leer teclado;
+	Para segundoss=1 Hasta teclado 
+		Para milisegundoss=0 Hasta 0
+			
+			Para k=1 Hasta 300000 
+				
+			Fin Para
+			Limpiar Pantalla;
+			Escribir segundoss;			
+		Fin Para
+	Fin Para
+		Escribir 'RING,RING,RING!!!';
+FinAlgoritmo

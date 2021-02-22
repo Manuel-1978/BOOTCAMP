@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	Definir segs,hors,mins Como Entero;
+	hors=23;
+     mins=59;
+	segs = 58;
+	Mientras Verdadero Hacer
+		Limpiar Pantalla;
+		
+		Escribir hors,':',mins,':',segs;
+		Esperar 1 segundos;
+		segs=segs+1;
+		
+		si segs>59 Entonces
+			segs=0;
+			mins = mins+1;
+		FinSi
+	
+		si mins>59 Entonces
+			mins=0;
+			hors=hors+1;
+		FinSi
+		si hors>23 Entonces
+			hors=0;
+			
+		FinSi
+		
+	FinMientras
+FinAlgoritmo

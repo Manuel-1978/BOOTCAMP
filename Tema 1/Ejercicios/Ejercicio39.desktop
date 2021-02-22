@@ -1,0 +1,39 @@
+Algoritmo Ejercicio_39
+	//Dado dos arrays del mismo tamaño, determinar, elemento a elemento,
+	//si ambos son iguales. Con que un elemento sea diferente, se considerarán 
+	//los arrays como diferentes. Escribir al final del algoritmo el resultado.
+	
+	Definir array_1,array_2,size,index Como Entero;
+	Definir Son_iguales Como Logico;
+	size = 5;
+	Dimension array_1[size],array_2[size];
+	
+	array_1[0] = 1;
+	array_1[1] = 2;
+	array_1[2] = 3;
+	array_1[3] = 4;
+	array_1[4] = 5;
+	
+	array_2[0] = 1;
+	array_2[1] = 2;
+	array_2[2] = 3;
+	array_2[3] = 4;
+	array_2[4] = 5;
+	//sera iguales hasta que demuestre lo contrario
+	Son_iguales=Verdadero; 
+	
+	Para index=0 hasta size-1 Con Paso 1 Hacer
+		//compruebo arrray por array si son verdadero
+		si array_1[index] <> array_2[index] Entonces
+			//si verdadero,si son diferentes
+			Son_iguales = Falso;
+		
+		FinSi
+	FinPara
+	
+	si Son_iguales Entonces
+		Escribir "Los arrays son iguales" ;
+	SiNo
+		Escribir "los arrays son diferentes";
+	FinSi
+FinAlgoritmo

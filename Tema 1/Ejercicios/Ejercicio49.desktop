@@ -1,0 +1,57 @@
+Algoritmo sin_titulo
+	//Se tienen los costes de producción de tres departamentos (dulces, bebidas y conservas)
+//correspondientes a los 12 meses del año anterior. Construir algoritmo que proporcione:
+		//a) ¿En qué mes se registró el mayor coste de producción de dulces?
+		//b) Promedio anual de los costes de producción de bebidas
+		//c) ¿En qué mes se registró el mayor coste de producción en bebidas, y en qué mes el menor
+		//coste?
+		//d) ¿Cuál fue el que tuvo menor coste de producción en diciembre?
+	Definir dulces,bebidas,conservas,size, mes, max_dulces,mes_maximo,suma,max_bebidas,mes_mini,mes_max,mini_bebidas Como Entero;
+	size= 12;
+	Dimension dulces[size],conservas[size],bebidas[size];
+	
+	Para mes=0 Hasta size-1 Con Paso 1 Hacer
+		dulces[mes]= Aleatorio(50, 300); 
+		conservas[mes]=Aleatorio(50, 300);
+		bebidas[mes]=Aleatorio(50, 300);
+		Escribir 'mes ',':', mes+1,'  ',dulces[mes],'  ',conservas[mes],'  ',bebidas[mes];
+	Fin Para
+	
+		Para mes = 0 hasta size-1 Con Paso 1 Hacer
+			Si mes == 0 O dulces[mes]> max_dulces Entonces
+				max_dulces = dulces[mes];
+				mes_maximo = mes;
+			Fin Si
+		Fin Para
+		suma=0;
+	Para mes=0 Hasta size-1 Con Paso 1 Hacer
+		suma=suma+bebidas[mes];
+	Fin Para
+		Para mes=0 hasta size -1 Con Paso 1 Hacer
+			si mes==0 o bebidas[mes]>max_bebidas Entonces
+				max_bebidas=bebidas[mes];
+				mes_max=mes;
+			FinSi
+			si mes==0 o bebidas[mes]<mini_bebidas Entonces
+				mini_bebidas=bebidas[mes];
+				mes_mini=mes;
+			FinSi
+		FinPara
+		si dulces[mes] < bebidas[mes] y dulces[mes]<conservas[mes]  Entonces
+			Escribir 'En diciembre el departamento de dulces ha tenido el menor coste';
+		SiNo
+			si bebidas[mes]<conservas[mes] Entonces
+				escribir 'En diciembre el departamento de bebidas tenido el menor coste';
+			SiNo
+				Escribir 'En diciembre el departamento de conservas ha tenido el menor coste';
+			FinSi
+		FinSi
+	
+	
+	
+	Escribir 'el registro de mayor coste de producion de dulces es el mes ', mes_maximo + 1, ' con un total de ',max_dulces;
+	Escribir 'La media de las bebidas es ', suma/size;
+	Escribir 'el registro de mayor producion de bebidas es el mes ', mes_max+1,' con un total de ', max_bebidas;
+	Escribir 'el registro menor producion de bebidas es el mes ', mes_mini+1,' con un total de ', mini_bebidas;
+	
+FinAlgoritmo

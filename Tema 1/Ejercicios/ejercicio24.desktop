@@ -1,0 +1,27 @@
+Algoritmo ejercicio_24
+//Calcular las calificaciones de un grupo de alumnos. La nota final de cada alumno se calcula según
+//el siguiente criterio: la parte práctica vale el 10%; la parte de problemas vale el 50% y la parte
+//teórica el 40%. El algoritmo leerá el nombre del alumno, las tres notas, escribirá el resultado y
+//volverá a pedir los datos del siguiente alumno hasta que el nombre sea una cadena vacía. Las
+//notas deben estar entre 0 y 10, si no lo están, no imprimirá las notas, mostrará un mensaje de error
+//y volverá a pedir otro alumno.
+	definir nombre Como Caracter;
+	definir practica,problema,teorica,media Como real;
+	
+	Escribir '¿Dime su nombre completo?';
+	Leer nombre;
+	
+	Escribir 'cual es tu nota de practica?';
+	leer practica;
+	Escribir 'cual es tu nota de teorica?';
+	leer teorica;
+	Escribir 'cual es tu nota de problema?';
+	leer problema;
+	si (practica>=0 y practica<=10) y (teorica>=0 y teorica<=10) y (problema>=0 y problema<=10) Y (nombre <> nombre) entonces
+		media = practica * 0.1 +teorica * 0.4 + problema * 0.5;
+		Escribir 'La nota media de ' nombre ,' es ' , media;
+	SiNo
+		Escribir 'la datos  introducidos no son correctos';
+	FinSi
+	
+FinAlgoritmo

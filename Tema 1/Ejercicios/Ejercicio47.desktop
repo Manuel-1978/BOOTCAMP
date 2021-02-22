@@ -1,0 +1,24 @@
+Algoritmo ejercicio_47
+	//Dados un array de 5 elementos con números aleatorios del 1 al 100. 
+	//Imprimir el estado inicial del array, ordenarlo de forma ascendente 
+	//y volver a imprimir el nuevo estado.
+	Definir array,size,i,aux Como Entero;
+	size=5;
+	Dimension array[size];
+	Para i=0 Hasta size-1 Hacer
+		array[i]=Aleatorio(1,100);
+		Escribir array[i],' 'Sin Saltar;
+	FinPara
+	Escribir '';
+	Para i=0 hasta size-2 Hacer
+		si array[i]>array[i+1] Entonces
+			aux=array[i];
+			array[i]= array[i+1];
+			array[i+1]=aux;
+		FinSi
+	FinPara
+	Escribir 'estado final';
+	para i=0 Hasta size-1 Hacer
+		Escribir array[i],' ' Sin Saltar;
+	FinPara
+FinAlgoritmo

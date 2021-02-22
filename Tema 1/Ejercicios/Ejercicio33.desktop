@@ -1,0 +1,20 @@
+Algoritmo sin_titulo
+	//Crear un array de tamaño 10 y que guardará números 
+	//enteros introducidos por teclado.
+	//Tras introducirlos todos, imprimirá cada índice 
+	//junto con el valor al que corresponda.
+	Definir size, num,teclado Como Entero;
+	size=10;
+	Dimension num[size];
+	
+	
+	Para teclado = 0 Hasta size-1 Con Paso 1 Hacer
+		Leer num[teclado];
+		
+		
+	FinPara
+	Para teclado=0 Hasta size-1 Con Paso 1 Hacer
+		Escribir'MY ARRAY ES[', teclado ']',' ES ESTE SU VALOR ',num[teclado];
+	Fin Para
+	Escribir '';
+FinAlgoritmo

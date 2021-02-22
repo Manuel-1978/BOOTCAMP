@@ -1,0 +1,23 @@
+Algoritmo ejercicio_38
+	//Dado un array de números de 5 posiciones con los siguiente 
+	//valores [1, 2, 3, 4, 5], guardar los
+	//valores de este array en otro array distinto pero c
+	//on los valores invertidos, es decir, que el segundo
+	//array deberá tener los valores [5,4,3,2,1].
+	Definir array_1,array_2,size,index Como Entero;
+	size= 5;
+	Dimension array_1[size],array_2[size];
+	
+	Para index=0 Hasta size - 1 Con Paso 1 Hacer
+		array_1[index]=index+1;
+		Escribir array_1[index], ' ',Sin Saltar;
+	FinPara
+	
+	Escribir '';
+	
+	Para index=0 Hasta  size-1 Con Paso 1 Hacer
+		
+		array_2[index]=array_1[4-index];
+		Escribir array_2[index], ' ',Sin Saltar;
+	FinPara
+FinAlgoritmo

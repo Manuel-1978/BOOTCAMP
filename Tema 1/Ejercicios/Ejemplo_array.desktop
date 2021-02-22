@@ -1,0 +1,18 @@
+Algoritmo Arrays
+	Definir my_array,tamano,indice Como Entero;
+	tamano = 5;
+	Dimension my_array[tamano];
+	my_array[1] = 50;
+	my_array[2] = 5;
+	my_array[3] = 20;
+	my_array[4] = 59;
+	//Imprimir el array completo
+	Para indice = 0 Hasta tamano-1 Con Paso 1 Hacer
+	            my_array[indice]= indice+1;
+		Escribir my_array[indice],' ' sin saltar;
+		
+	FinPara
+	Escribir '';
+	
+	
+FinAlgoritmo

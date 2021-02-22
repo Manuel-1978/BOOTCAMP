@@ -1,0 +1,20 @@
+Algoritmo ejercicio_56
+	//Leer y guardar en una matriz las notas de los alumnos de un colegio en función
+	//del número de cursos (filas) y del número de alumnos por curso (columnas).
+	//El máximo de alumnos será 5 para cada uno de tres cursos.
+	Definir calificaciones,cursos ,n_alumnos, numero_alumnos,numero_cursos Como Entero;
+	numero_cursos=3;
+	numero_alumnos=5;
+	Dimension calificaciones[numero_cursos,numero_alumnos];
+	
+	Para cursos=0 hasta numero_cursos-1 Hacer
+		Escribir 'el curso : ',cursos;
+		Para n_alumnos=0 Hasta numero_alumnos-1  Hacer
+			
+			calificaciones[cursos,n_alumnos]= Aleatorio(1,10);
+			Escribir  'las notas ',  calificaciones[cursos,n_alumnos];			
+		Fin Para
+		Escribir '';
+		
+	FinPara
+FinAlgoritmo

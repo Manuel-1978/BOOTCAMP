@@ -1,0 +1,24 @@
+Algoritmo sin_titulo
+	//Crear un array de 3 páginas, 4 filas y 5 columnas donde el primer
+	//elemento valga 1, el segundo 2,el tercero 3 y así sucesivamente, e imprimirla.
+	Definir array, pagina,fila,columna,t_pagina,t_fila,t_columan,index, contador Como Entero;
+	t_pagina= 3;
+	t_fila=4;
+	t_columan=5;
+	Dimension array[t_pagina,t_fila,t_columan]; 
+	contador=0;
+	para pagina= 0 Hasta t_pagina - 1 Hacer
+		para fila= 0 hasta t_fila-1 Hacer
+			para columna = 0 hasta t_columan - 1 Hacer
+				
+				array[pagina ,fila, columna] = contador;
+				
+				Escribir array[pagina ,fila, columna], '   'Sin Saltar;
+				contador=contador+1;
+			FinPara
+			Escribir ' ';
+		FinPara
+		
+		Escribir ' ';
+	FinPara
+FinAlgoritmo

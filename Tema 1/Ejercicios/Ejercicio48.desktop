@@ -1,0 +1,43 @@
+Algoritmo ejercicio_48
+
+	Definir nombre,lista,aux Como cadenas;
+	Definir se_repite Como logico;
+	Definir cant,i,j,pos_menor Como Entero;
+	
+	Dimension lista[100];
+	Escribir 'Ingrese los nombres,(si le das al enter termina y genera lista)';
+	//Aqui lee la lista de Proceso 
+	leer nombre;
+	cant=0;
+	Mientras nombre<>'' Hacer
+		//aqui asignamos nombre al array y la longitud
+		lista[cant]<- nombre;
+		cant<-cant+1;
+		Repetir//lee un nombre y verifica que no es te repetido
+			leer nombre;
+			se_repite=falso;
+			Para i<-0 Hasta cant-1 Hacer
+				si nombre==lista[i] Entonces
+					se_repite<-Verdadero;
+				FinSi
+			FinPara
+		Hasta Que no se_repite
+	Fin Mientras
+	//esta parte ordena el proceso
+	Para i<-0 hasta cant-2 hacer 
+		pos_menor<-i; //busca el menor entre i y cant
+		para j<-i+1 hasta cant-1 Hacer
+			si lista[j]<lista[pos_menor] Entonces
+				pos_menor<-j;
+			FinSi
+		FinPara
+		aux<-lista[i]; //intercambia el que estaba en i con el menor que encuentra
+		lista[i]<-lista[pos_menor];
+		lista[pos_menor]<-aux;
+	FinPara
+	//y  mostramos la lista ordenada
+	Escribir 'La lista de nombre ordenadas es; ';
+	Para i<-0 hasta cant-1 Hacer
+		Escribir '   ',lista[i];
+	FinPara
+FinAlgoritmo

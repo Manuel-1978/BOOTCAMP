@@ -1,0 +1,13 @@
+Algoritmo ejemplo_for
+	Definir contador Como Entero;
+	Para contador=0 Hasta 10 Con Paso 1 Hacer
+		Escribir 'contador : ',contador;
+	Fin Para
+	contador=0;
+	Mientras contador< 10 Hacer
+		Escribir 'contador del while ',contador;
+		contador=contador+1;
+		
+	Fin Mientras
+	
+FinAlgoritmo

@@ -1,0 +1,13 @@
+Algoritmo Ejercio_17
+	Definir N , contador, suma Como Entero;
+	Leer N;
+	contador = 0;
+	suma= 0;
+	Mientras contador< N Hacer
+		Escribir contador;
+		suma = contador + suma;
+		contador = contador+1;			
+	Fin Mientras
+	Escribir  'La suma es: ', suma;
+	
+FinAlgoritmo

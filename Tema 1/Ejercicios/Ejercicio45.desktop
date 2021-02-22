@@ -1,0 +1,30 @@
+Algoritmo sin_titulo
+	Definir  vector1,vector2,i,i2,size Como Entero;
+	size=10;
+	Dimension vector1[size],vector2[size];
+	i2=0;
+	para i=0 Hasta size-1 Hacer
+		//rellenar e Imprimir el primer vector1
+		vector1[i] = Aleatorio(1,50);
+		Escribir vector1[i],' 'Sin Saltar;
+		
+		//rellenar e Imprimir el segundo vector
+		si vector1[1] mod 2==0 y vector1[i]>25 Entonces
+			vector2[i2]=vector1[i];
+			i2=i2+1;
+		
+	    FinSi
+   FinPara
+
+	Escribir '';
+	
+	si i2<1 Entonces
+		Escribir 'elsegundo vector es vacio';
+	sino
+		para i=0 Hasta i2-1 Hacer
+			Escribir vector2[i],''Sin Saltar;
+		FinPara
+	FinSi
+	
+	
+FinAlgoritmo

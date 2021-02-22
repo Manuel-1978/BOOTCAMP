@@ -1,0 +1,23 @@
+Funcion print_array(array,size)
+	Definir indice Como Entero;
+	
+	Para indice = 0 Hasta size-1 Hacer
+		Escribir array[indice],' 'Sin Saltar;
+		
+	FinPara
+	Escribir '';
+FinFuncion
+
+Algoritmo ejemplo_funciones
+	
+	Definir indice,array,size Como Entero;
+	size=10;
+	Dimension array[size];
+	
+	Para indice = 0 Hasta size-1 Hacer
+		array[indice] = Aleatorio(1,50);
+	Fin Para
+	
+	print_array(array,size);
+	
+FinAlgoritmo

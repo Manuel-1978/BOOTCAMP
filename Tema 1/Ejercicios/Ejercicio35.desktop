@@ -1,0 +1,23 @@
+Algoritmo sin_titulo
+	//35.Ejercicio
+	//Crear un array de números donde le indicaremos el tamaño por teclado. Rellenará cada elemento
+	//con números aleatorios entre 0 y 9. Posteriormente, mostrará por pantalla el valor de cada posición
+	//junto con su índice y finalmente, la suma de todos los valores.
+	
+	Definir array, size,num,suma Como Entero;
+	Escribir 'Dime el tamaño del arraya';
+	Leer size;
+	
+
+	Dimension array[size];
+	
+	para num=0 hasta size-1 Con Paso 1 Hacer
+		array[num]=Aleatorio(0,9);
+	FinPara
+	suma=0;
+	para num=0 hasta size-1 Hacer
+		escribir 'bloque ',num, ' : ','es ', array[num];
+		suma= suma +array[num];
+	FinPara
+	Escribir 'La suma de los elementos es: ',suma;
+FinAlgoritmo

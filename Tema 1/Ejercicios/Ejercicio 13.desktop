@@ -1,0 +1,12 @@
+Algoritmo ejercicio_12
+	Definir T,N Como Real;
+	Escribir 'Cuantos veces canta el grillo?';
+	Leer N;
+	T = N/4 + 40;
+	Si N >= 0 Entonces
+		Escribir 'La Temperatura es: ',T;	
+	SiNo
+	    Escribir  'El grillo ha muerto';
+	 Fin Si
+	
+FinAlgoritmo

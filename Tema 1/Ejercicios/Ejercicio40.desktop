@@ -1,0 +1,11 @@
+Algoritmo ejercicio_40
+	//Generar un array de 20 elementos con números aleatorios no repetidos entre sí.
+	Definir array,index,size Como Entero;
+	Definir son_iguales Como Logico;
+	size = 20;
+	Dimension array[size];
+	son_iguales = Verdadero ;
+	
+	
+	
+FinAlgoritmo

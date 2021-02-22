@@ -1,0 +1,29 @@
+Funcion resultado=es_primo( N )
+	Definir indice Como Entero;
+	Definir resultado Como Logico;
+	resultado=Verdadero;
+	
+	para indice=2 hasta N-1
+		si N mod indice==0 Entonces
+			resultado=Falso;
+		FinSi
+	FinPara
+	
+FinFuncion
+Algoritmo ejercicio_54
+	//Diseñar un algoritmo que lea el número N e imprima y cuente todos 
+	//los números primos menores que N.
+	Definir N,suma,i, contador_primos Como Entero;
+	
+	Escribir 'introduce un numero N';
+	Leer N;
+	contador_primos=0;
+	suma=0;
+	para i=2 hasta N Con Paso 1 Hacer
+		si es_primo(i) Entonces
+			Escribir i,' es primo.';
+			contador_primos=contador_primos+1;
+		FinSi
+	FinPara
+	
+FinAlgoritmo

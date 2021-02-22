@@ -1,0 +1,17 @@
+Funcion saludar(nombre,apellido,dia)
+	Escribir 'HOLA!! ',nombre, ' ',apellido;
+	si Minusculas(dia) =='viernes' Entonces
+		Escribir 'Ya es viernes, ¡ Buen finde!';
+	SiNo
+		Escribir '¡ Un dia mas animo!';
+	FinSi
+FinFuncion
+
+Algoritmo saludo
+	Definir nombre, apellido,dia Como Caracter;
+	Escribir 'que dia es hoy?';
+	leer dia;
+	saludar('Paco','Martinez Soria',dia);
+	
+
+FinAlgoritmo

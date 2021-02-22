@@ -1,0 +1,32 @@
+Algoritmo ejercicio_41
+//Dado un array de N números enteros que se generen aleatoriamente, hacer un algoritmo que:
+		//a) Obtenga cuántos números son mayores que 0.
+		//b) Calcule el promedio de los números positivos.
+		//c) Obtenga el promedio de todos los números.
+	
+	Definir n,array,index,size,contador,suma,sumatotal Como Entero;
+	Definir promedio, promedio_total Como Real;
+	Escribir ' Introduce el tamaño del array';
+	Leer size;
+	Dimension array[size];
+	contador = 0;
+	suma=0;
+	sumatotal=0;
+	Para index=0 hasta size - 1 Con Paso 1 Hacer
+		
+		array[index]= Aleatorio(-5,15);
+		Escribir array[index];
+		
+		si array[index]>0  Entonces
+			contador = contador+1;
+			suma = suma + array[index];
+		FinSi
+		sumatotal=suma+sumatotal;
+	FinPara
+	promedio = suma/contador;
+	promedio_total = sumatotal/size;
+	Escribir 'Los numeros mayores que 0 son: ', contador;
+	Escribir 'la media de los numeros positivos es: ',promedio;
+	Escribir 'la media total  es: ',sumatotal;
+	Escribir 'El pomedio total es : ', promedio_total;
+FinAlgoritmo

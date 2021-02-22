@@ -1,0 +1,21 @@
+Algoritmo sin_titulo
+	Definir columnas ,filas,lados Como Entero;
+	Escribir 'Intruduce el tamaño del cuadrado';
+	leer lados;
+	//encargado de dibujar filas 
+	
+	Para filas = 1 Hasta lados  Hacer
+		
+		Para columnas = 0 Hasta lados  Hacer
+			//encargado de dibujas columnas
+			Escribir ' * '; Sin Saltar;
+		FinPara
+		
+		Escribir '';
+	Fin Para
+	
+	
+		
+	
+	
+FinAlgoritmo

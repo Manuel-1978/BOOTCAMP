@@ -1,0 +1,35 @@
+Algoritmo sin_titulo
+	//Dada un matriz cuadrada A (array de 2 dimensiones con el mismo número de columnas 
+	//que de filas, por ejemplo: 3) construir un algoritmo que permita determinar si dicha 
+	//matriz es simétrica. Se considera que una matriz es simétrica si A[i,j] = A[j,i] 
+	//para todos los elementos i,j de la matriz. 
+	Definir  matriz,fila,columna,size Como Entero;
+	Definir es_simetrica Como Logico;
+	 size=3;
+	 Dimension matriz[size, size];
+	 matriz[0,0]=1;
+	 matriz[0,1]=2;
+	 matriz[0,2]=3;
+	 
+	 matriz[1,0]=2;
+	 matriz[1,1]=1;
+	 matriz[1,2]=2;
+	 
+	 matriz[2,0]=3;
+	 matriz[2,1]=2;
+	 matriz[2,2]=1;
+	 
+	 Para fila =0 hasta size-1 Hacer
+		 para columna=0 hasta size-1 Hacer
+			 Escribir  matriz[fila,columna],' 'Sin Saltar;
+		 FinPara
+		 Escribir '';
+	 FinPara
+	 es_simetrica=Verdadero;
+	 Para fila=0 Hasta size-1 Hacer
+		 
+	 FinPara
+	 
+	 
+	
+FinAlgoritmo

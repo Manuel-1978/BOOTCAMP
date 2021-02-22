@@ -1,0 +1,36 @@
+Algoritmo sin_titulo
+	//Partir del ejercicio 28 pero esta vez realizar
+	//un reloj digital completo que nunca pare. 
+	//Tendrá la estructura horas:minutos:segundos.
+	//Ejemplo de salida: 23:15:39				
+//Nota: deberás utilizar “Esperar” y “Limpiar pantalla”.
+	Definir hours,mins,segs Como Entero;
+	hours=0;
+	mins=0;
+	segs=0;
+	Escribir 'Dime que hora es?';
+	leer hours;
+	leer mins;
+	
+	Mientras Verdadero hacer
+		Limpiar Pantalla;
+		
+		Escribir hours,':',mins,':',segs;
+		
+		Esperar 1 Segundos;
+		segs=segs+1;
+		
+		si segs > 59 Entonces
+			segs=0;
+			mins=mins+1;
+		FinSi
+		si mins>59 Entonces
+			mins=0;
+			hours=hours+1;
+			
+		FinSi
+		si hours>23 Entonces
+			hours=0;
+		FinSi
+	FinMientras
+FinAlgoritmo

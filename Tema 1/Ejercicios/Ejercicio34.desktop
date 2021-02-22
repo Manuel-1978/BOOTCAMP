@@ -1,0 +1,48 @@
+Algoritmo sin_titulo
+	//34.Ejercicio
+	//a) Generar un número aleatorio (del 1 al 10) que el usuario debe adivinar.
+	//b) Aumentar el límite superior a 100 y añadir una ayuda al usuario:
+	//escribir si el número es mayor o menor que la lectura
+	Definir adivinar,num Como Entero;
+
+	 //a)adivinar= Aleatorio(1,10);
+	//Escribir 'adivina el numero';
+	//num=4;
+	//leer adivinar;
+	//Si adivinar ==num Entonces
+		//Escribir 'Muy bien lo has adivinado';
+	//SiNo
+		//escribir'oHH lastima!! prueba otra vez';
+	//Fin Si
+	
+	//b)adivinar= Aleatorio(1,100);
+	//Escribir 'Adivina un numero';
+	//Leer adivinar;
+	//num=44;
+	//si adivinar==44 Entonces
+		//Escribir 'Estupendo has acertado!!!';
+	//sino 
+		//si adivinar<num Entonces
+			//Escribir ' casi!!! el Numero es mayor!!1';
+		//SiNo
+			//Escribir 'casi!! El Numero es menor.';
+		//FinSi
+		
+	//FinSi
+	adivinar=Aleatorio(1,100);
+	Escribir 'Adivina el numero del 1 al 100';
+	Repetir
+		
+		Leer num;
+		si adivinar>num Entonces
+			Escribir 'El numero es mayor';
+		SiNo
+			si adivinar<num Entonces
+				Escribir 'El numero es menor';
+			FinSi
+			
+		FinSi
+	Mientras Que adivinar <>num;
+	Escribir 'Bieeen has acertado!! el numero es: ',adivinar;
+	
+FinAlgoritmo

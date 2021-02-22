@@ -1,0 +1,41 @@
+Algoritmo ejercicio_30
+	Definir columnas, filas,num_f,contador Como Entero;
+	
+	Escribir 'escribe el numero de filas';
+	leer num_f;
+	// a) Para   filas=1 hasta 4  con paso  1 Hacer
+		
+		//para columnas=1 hasta filas Con Paso 1 hacer
+			//Escribir columnas Sin Saltar;
+		//FinPara
+		//Escribir '';
+	//Fin Para
+	
+	//b) Para   filas=1 hasta num_f Con Paso 1 Hacer
+	  
+		//para columnas=1 hasta filas Con Paso 1 hacer
+			
+			//Escribir filas Sin Saltar;
+			
+	    //FinPara
+		
+	  //Escribir '';
+	//Fin Para
+	
+	//c)
+      contador=1;
+	Para   filas=1 hasta num_f Con Paso 1 Hacer
+	
+	   para columnas=1 hasta filas Con Paso 1 hacer
+	
+		   Escribir contador Sin Saltar;
+		   contador= contador+1;
+	
+	   FinPara
+	
+	        Escribir ' ';
+	Fin Para
+	
+	
+	
+FinAlgoritmo

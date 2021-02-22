@@ -1,0 +1,20 @@
+Algoritmo ejercicio_55
+	//Generar una matriz de 4 filas y 5 columnas con números aleatorios entre 1 y 100. 
+	//Imprimirla en forma de matriz o tabla, con sus filas y columnas.
+	Definir Matrix,size_colum,size_line,colum,line Como Entero;
+	size_line= 4;
+	size_colum=5;
+	Dimension Matrix[size_line,size_colum]; 
+	
+	para line= 0 Hasta size_line - 1 Hacer
+		
+		para colum = 0 hasta size_colum - 1 Hacer
+			
+			Matrix[line , colum] = Aleatorio(1, 100);
+			
+			Escribir Matrix[line,colum], '    'Sin Saltar;
+			
+		FinPara
+		Escribir ' ';
+	FinPara
+FinAlgoritmo

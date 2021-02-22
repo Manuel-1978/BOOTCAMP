@@ -1,0 +1,39 @@
+
+	//Usar una función para calcular el promedio recibiendo un array y su longitud. 
+	//En el algoritmo principal, leer la cantidad de datos que introducirá el usuario 
+	//y posteriormente los propios datos.
+	//Escribir el resultado de su promedio.
+	Funcion print_array(array,size)
+		Definir indice Como Entero;
+		
+		Para indice = 0 Hasta size-1 Hacer
+			Escribir array[indice],' 'Sin Saltar;
+			
+		FinPara
+		Escribir '';
+FinFuncion 
+
+Funcion resultado= promedio( array,size)
+	Definir resultado Como Real;
+	Definir suma,index Como Entero;
+	suma=0;
+	Para index=0 Hasta size -1 Hacer
+		suma= suma+array[index];
+	FinPara
+	resultado= suma/size;
+FinFuncion
+
+Algoritmo ejercicio_53
+	Definir index,array,size Como Entero;
+	Escribir ' ¿dime el tamaño de tu arrray? ';
+	Leer size;
+	Dimension array[size];
+	
+	Para index = 0 Hasta size-1 Hacer
+		Escribir ' introduce el dato';
+		leer array[index];
+	Fin Para
+	
+	print_array(array,size);
+	Escribir 'El promedio es: ', promedio(array,size);
+FinAlgoritmo

@@ -1,0 +1,18 @@
+Algoritmo sin_titulo
+	//27.Ejercicio
+	//Desarrollar un algoritmo que imprima la tabla de multiplicación del número N introducido por
+	//teclado. Para N = 13, el output sería:
+			//13 X 1 = 13
+			//13 X 2 = 26
+			//…
+	//13 X 10 = 130
+	
+	Definir imput,contador Como Entero;
+	
+	Escribir 'introduce el numero';
+	Leer imput;
+	Para contador=1 Hasta 10 Con Paso 1 Hacer
+		Escribir imput, ' X ',contador, ' = ',imput*contador;
+	Fin Para
+FinAlgoritmo
+

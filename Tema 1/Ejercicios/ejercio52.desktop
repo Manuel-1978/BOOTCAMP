@@ -1,0 +1,33 @@
+Algoritmo sin_titulo
+	//52.Ejercicio
+	//Rellenar un array con 10 números aleatorios entre 1 y 15. 
+	//Posteriormente, buscar un número introducido por teclado y 
+	//nos debe decir si está incluido en el array y el índice de su 
+	//primera coincidencia
+	Definir array,N,size,index,contador Como Entero;
+	contador=0;
+	
+	Escribir ' ¿Cuantos indices quiere crear en el array?';
+	Leer size;
+	Dimension array[size];
+
+	Para index=0 Hasta size-1 Hacer
+		array[index]=Aleatorio(1,15);
+		Escribir array[index],'';
+	Fin Para
+	
+	Escribir ' ¿que numero quiere comprobar si se ha generado?';
+	Leer N;
+	
+	para index = 0 Hasta size -1 Hacer
+		si N == array[index]
+			Escribir 'el numero ',N,' ha aparecido en el indice ',array[index];
+			contador=index;
+			index=size-1;
+		
+		FinSi
+		
+	FinPara
+	Escribir N;
+
+FinAlgoritmo

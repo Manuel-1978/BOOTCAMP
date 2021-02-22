@@ -1,0 +1,51 @@
+Algoritmo ejercicio_44
+	//Partir del ejercicio 2 y añadir la siguiente funcionalidad:
+	//El usuario tendrá un menú numérico en pantalla para poder elegir 
+	//entre las operaciones a realizar.
+	//Si da una opción incorrecta (no existe), el programa avisará al usuario
+	//y volverá a mostrar el menú.
+	//Hará esto hasta que el usuario elija la opción de salir del programa. 
+	//Ejemplo de menú impreso por	pantalla:
+//“Seleccione el número de una de las siguientes opciones:
+		//1: Sumar
+		//2: Restar
+		//3: Multiplicar
+		//4: Dividir
+		//5: Salir del programa.”
+	
+	Definir a, b,operacion Como real;
+		
+	Repetir
+		
+	   Escribir 'Dime dos numeros';
+	   Leer a,b;
+	   Escribir '1: Sumar';
+	   Escribir '2: Restar';
+	   Escribir '3: Multiplicar';
+	   Escribir '4: Dividir';
+	   Escribir '5: Salir del programa.';
+	   operacion=0;
+	   Escribir 'Elige opción';
+	   Leer operacion;
+			Segun operacion Hacer
+				1:
+					Escribir 'la suma de los numeros es: ',a+b;
+				2:
+					Escribir 'la resta de los numeros es: ',a-b;
+				3:
+					Escribir 'la multiplicacion de los numeros es: ',a*b;
+				4:
+					Escribir 'la division de los numeros es: ',a/b;
+				De Otro Modo:
+					si operacion!=4 Entonces
+						Escribir  'Opcion elegida no es correcta.';
+						
+						
+					FinSi
+			Fin Segun	
+		Hasta Que operacion=5
+		
+     Escribir 'salir de programa';
+	
+	
+FinAlgoritmo
