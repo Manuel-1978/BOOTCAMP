@@ -3,6 +3,9 @@
 
 <head>
     <style>
+        button{
+            background-color: crimson;
+        }
         body {
             background-color: rgb(43, 198, 226);
         }
@@ -98,13 +101,100 @@ escribirlo.
                     <option value="male">Masculino</option>
                     <option value="Other">Otro</option>
                 </select>
-<input id="ageInput" name="ageInput" value="30" type="number" min="0" max="120"><br>
+                <br><br>
+                <div>
+                    <input id="ageInput" name="ageInput" value="30" type="number" min="0" max="120">
+                    <br><br>
+                    <label for="birthdayInput">Edad</label>
+                    <input type="date" id="birthdayInput" name="birthdayInput">
 
-<input type="date"><br>
+                </div>
 
-        </form>
+                <br><br>
+
+                <div class="inputBlock">
+                    <label for="carBrandInput">La marca de tu coche</label>
+                    <input type="text" id="carBrandInput" name="carBrand">
+                    <datalist>
+                        <option value="BMW">BMW</option>
+                        <option value="Wolksvagen">Wolksvagen</option>
+                        <option value="Seat">Seat</option>
+                        <option value="Citroen">Citroen</option>
+                        <option value="Ford">Ford</option>
+                    </datalist>
+                </div>
+                <br>
+
+       
+        <br><br>
+        <fieldset disabled>
+            <legend>Informacio de tu pareja</legend>
+            <div class="inputBlock">
+                <label for="nameinput">Nombre:</label><br>
+                <input type="text" id="nameinput" name="username" placeholder="Introduce tu nombre">
+
+            </div>
+
+            <div class="inputBlock">
+                <label for="lastNameInput">Apellidos:</label><br>
+                <input type="text" id="lastNameInput" name="userlastname" placeholder="Introduce tu apellido">
+            </div>
+        </fieldset>
+        <br>
+
 
     </footer>
+    <fieldset>
+        <legend>Estado Civil</legend>
+        <div>
+            <input type="radio" name="civilState" id="marriedInput">
+            <label for="marriedInput">Casdado</label>
+        </div>
+        <div></div>
+        <input type="radio" name="civilState" id="marriedInput">
+        <label for="marriedInput">soltero</label>
+        </div>
+        <div>
+            <input type="radio" name="civilState" id="marriedInput">
+            <label for="marriedInput">Divorciado</label>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Productos</legend>
+        <div>
+            <input type="checkbox" name="iphonedInput" id="iphonedInput">
+            <label for="iphonedInput">Iphone</label>
+        </div>
+        <div></div>
+        <input type="checkbox" name="mackbookInput" id="mackbookInput">
+        <label for="mackbookInput">Mackbook Pro</label>
+        </div>
+        <div>
+            <input type="checkbox" name="AirpodsInput" id="AirpodsInput">
+            <label for="AirpodsInput">Airpods</label>
+        </div>
+    </fieldset>
+
+    <label for="">Cantidad de Gasoliana</label>
+    <meter min="0" max="100" id="fuelLevel" value="60"></meter>
+
+    <br><br>
+
+    <label for="progressInput">Progreso</label>
+    <progress max="100" value="33" id="progressInput"></progress>
+
+    <br><br>
+    <label for="fileInput">Subir un Archivo</label>
+    <input type="file" id="fileInput" name="fileInput">
+
+    <br><br>
+
+    <input type="submit" value="Guardar">
+    <input type="reset" value="Vaciar">
+</form>
+<!-- Multimedia/Media-->
+<img src="/Html1/imagenes/144382.jpg " width="500" alt="Montañas de goku">
 </body>
 
 </html>

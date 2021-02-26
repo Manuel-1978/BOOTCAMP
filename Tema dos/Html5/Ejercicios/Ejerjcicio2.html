@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: rgb(0, 100, 30);
+        }
+
+        button {
+            background-color: darkred;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Formulario Ejercicio 2</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Informacion personal</legend>
+        <form action="">
+
+            <div class="inputBlock">
+                <label for="nameinput">Nombre:</label>
+                <input type="text" id="nameinput" name="username" placeholder="Introduce tu nombre">
+                <label for="lastNameInput">Apellidos:</label>
+                <input type="text" id="lastNameInput" name="userlastname" placeholder="Introduce tu apellido">
+            </div>
+            <br><br>
+            <div>
+                <label for="ageInput">Edad</label>
+                <input id="ageInput" name="ageInput" value="40" type="number" min="0" max="120">
+
+
+
+            </div>
+            <br> <br>
+            <div class="inputBlock">
+                <label for="email">Email:</label><br>
+                <input type="text" id="emailInput" name="userEmail" placeholder="name@Email.com">
+            </div>
+            <br>
+            <div class="radio">
+                <label for="passwordInput">Contraseña:</label><br>
+                <input type="password" id="passwordInput" name="passwordInput" placeholder="**********">
+                <br>
+                <fieldset>
+                    <legend>Genero</legend>
+                    <div class="inputBlock">
+                        <input type="radio" id="womanInput" name="womanInput">
+                        <label for="womanInput">Mujer</label>
+
+
+                    </div>
+                    <div class="inputBlock">
+                        <input type="radio" id="manInput" name="manInput">
+                        <label for="manInput">Hombre</label>
+
+                    </div>
+                    <div class="inputBlock">
+                        <input type="radio" id="otherInput" name="otherInput">
+                        <label for="otherInput">Otro</label>
+
+                    </div>
+                    <br>
+
+
+                </fieldset>
+                <br>
+
+                <div>
+                    <label for="countryInput">Pais</label>
+                    <input type="text" id="countryInput" name="country" placeholder="Introduce tu pais">
+                </div>
+                <br><br>
+                <label for="programLanguage">Lenguaje de programacion</labe><br>
+                    <select name="languageInput" id="languageInput">
+                        <option value="Javascript">Javascript</option>
+                        <option value="Python">Python</option>
+                        <option value="C++">C++</option>
+                    </select>
+                    <br><br><br>
+                    <fieldset>
+                        <legend>Seleciona tu academia de Programacion faborita: </legend>
+                        <div class="inputBlock">
+                            <input type="radio" id="codespaceInput" name="codespaceInput">
+                            <label for="codespaceInput">Code Space</label>
+
+
+                        </div>
+                        <div class="inputBlock">
+                            <input type="radio" id="academia1Input" name="academia1">
+                            <label for="academia1Input">Hombre</label>
+
+                        </div>
+                        <div class="inputBlock">
+                            <input type="radio" id="academia2Input" name="academia2">
+                            <label for="academia2Input">Otro</label>
+
+                        </div>
+                        <br>
+                    </fieldset>
+
+                    <br>
+        </form>
+        <br><br>
+    </fieldset>
+    <input type="checkbox" id="checkemailInput" name="checkemail">
+    <label for="checkemailInput">Acepto recibir cientos de miles de correos irrelevantes</label>
+    <br>
+    <input type="checkbox" id="checkconditionsInput" name="checkconditions">
+    <label for="checkconditionsInput">Acepto los términos y condiciones</label>
+    <br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Vaciar Formulario">
+
+</body>
+
+</html>
