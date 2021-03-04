@@ -1,0 +1,25 @@
+/* Tipos de Display: none, inline,block,inline-block*/
+/* este simbolo significa "^" empezar por..atributo */
+[class^="box"]{
+background-color: steelblue;
+}
+.box-0{
+    display: none;
+    }
+.box-3,
+.box-4,
+.box-3 p,
+.box-4 p{
+    display: inline-block;
+
+}
+
+.box-5,.box-6,.box-5 p,.box-6 p{
+    display: inline;
+}
+.x-centered{
+    background-color: teal;
+    height: 50px;
+    width: 25vw;
+    margin: auto;
+}
