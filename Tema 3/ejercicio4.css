@@ -1,0 +1,95 @@
+.header
+{
+    background-color: 
+    rgba(62, 133, 151, 0.925);
+    border: 2px solid rgb(12, 17, 94);
+height: 100px;
+}
+.giz
+ {
+   
+     height: 100px;
+   
+     
+     float: left;
+ }
+.browser
+{
+    height: 100px;
+    float: right;
+}
+
+.know-more>a
+{   
+    background-color: rgba(248, 171, 71, 0.925);
+
+ border: 2px solid rgb(12, 17, 94); 
+ height: auto;
+ width: 99.99%;
+ float: inline-end;
+}
+.principalbox
+{
+    height: auto;
+  width: auto;
+background-color: rgba(128, 255, 0, 0.541);
+}
+.newsbox
+{
+    width: 18%;
+    height: 500px;
+    background-color: rgba(247, 143, 7, 0.925);
+    float: left;
+    border: 2px solid black;
+}
+
+.centralbox
+{
+    height: 500px;;
+    float: right;
+    background-color: rgba(0, 92, 128, 0.658);
+    width: 80%;
+    border: 1px solid black;
+}
+.centralbox1
+{
+    text-align: center;
+    height: 450px;
+    float: right;
+    width: 500px;
+    border-right: 2px solid rgb(12, 17, 94);
+    margin-left: auto;
+    border: 1px solid black;
+    background-color: rgb(39, 221, 221);
+}
+.centralbox2
+{
+    text-align: left;
+    height: 452px;
+    float: left;
+    width: 1000px;
+    border-right:1px solid rgb(12, 17, 94);
+    background-color: rgb(23, 153, 153);
+    
+}
+
+.footer
+{
+   
+    width:auto ;
+    background-color: chartreuse;
+    height: 50px;
+    clear: both;
+    border: 1px solid black;
+}
+[class^="menu"]
+{
+   
+    text-align: center;
+    float: left;
+  
+}
+.copyright
+{
+    float: right;
+}
