@@ -40,7 +40,7 @@ width: auto;
 background-color: rgba(128, 255, 0, 0.541);
 padding: 10px;
 }
-.newsbox>a,p{
+.newsbox>a, p{
     display: block;
 }
 .newsbox
@@ -55,6 +55,7 @@ padding: 10px;
 
 .centralbox
 {
+    
     height: 100%;
     float: right;
     background-color: rgba(0, 92, 128, 0.658);
