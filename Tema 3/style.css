@@ -58,3 +58,29 @@
             
         }
     }
+    /*Flexbox*/
+
+    .flex-parent
+    {
+        flex-direction: row; /* row-columna*/
+        display: flex; /*fila*/
+       flex-wrap: wrap; 
+    } 
+
+    [class^="flex-child"]
+    {
+        width: 250px;
+        height: 250px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    .flex-parent > div:nth-child(odd){
+        background-color: #ddd;
+        color: #333
+    }
+    .flex-parent > div:nth-child(even){
+        background-color:  #333;
+        color:#ddd;
+    }
