@@ -1,0 +1,31 @@
+.grid-parent{
+    display: grid;
+  
+    gap: 10px;
+grid-template-rows: 1fr 2fr 1fr 1fr;
+
+    grid-template-areas:"nav nav"   
+                        "adiv section1"
+                        "adiv section2"
+                        "footer footer";
+}
+.grid-parent > .nav{
+grid-area: nav;
+background-color: cornflowerblue;
+}
+.grid-parent > .adiv{
+    grid-area: adiv;
+    background-color: rgb(111, 96, 201);
+}
+.grid-parent > .section1{
+    grid-area: section1;
+    background-color: rgb(32, 32, 129);
+}
+.grid-parent > .section2{
+    grid-area: section2;
+    background-color: rgb(158, 222, 224);
+}
+.grid-parent > .footer{
+    grid-area: footer;
+    background-color: rgb(253, 213, 153);
+}
