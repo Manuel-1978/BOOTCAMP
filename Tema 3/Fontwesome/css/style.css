@@ -1,0 +1,76 @@
+.menu-icon{
+    color: blue;
+}
+.side-icon{
+    color: tomato;
+}
+/*Degradados o gradientes de color*/
+[class^="gradient"] {
+    height: 250px;  
+    width: 250px;  
+    margin-bottom: 10px;
+}
+.gradient-1{
+    background: linear-gradient(to right,darkblue,white);
+}
+.gradient-2{
+    background: linear-gradient(to bottom,white,darkblue 20%,white);
+}
+.gradient-3{
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0),rgba(255,255,255,1)), url(/imganesCSS/donde-vive-bufalo-2.jpg);
+background-size: cover;
+}
+.gradient-4{
+    background: radial-gradient(white,rgb(206, 255, 71),red);
+box-shadow: 5px 5px 15px blue;
+}
+/*Transformaciones*/
+.transform{
+    width: 100px;
+   height: 100px;
+   background-color: grey; 
+   transform: translate(300px, -20px) rotate(35deg) scale(1.5) skewX(25deg);
+
+}
+/*Transiciones*/
+.transitions{
+    width: 100px;
+   height: 100px;
+   margin-left: 100px;
+   background-color: darkcyan;
+   color: white;
+   cursor: pointer;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /*transition-property: transform;
+   transition-duration: 0.5s;
+   transition-delay: 0.5s;
+   transition-timing-function: ease;*/
+   transition: all,05s,ease-in;
+}
+.transitions:hover
+{
+    transform: scale(1.3) rotate(3deg);
+}
+/*Animaciones*/
+.text-animation{
+    animation-name: slidein;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes slidein{
+    from{
+        margin-left: 100%;
+    }
+    50%{
+        margin-left: 0%;
+        color: violet;
+    }
+    to{
+        margin-left: 100%;
+    }
+}
