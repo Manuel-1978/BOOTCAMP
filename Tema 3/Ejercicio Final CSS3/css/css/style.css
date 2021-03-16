@@ -4,6 +4,8 @@
 body{
     font-family: Inter, system-ui, Roboto, Helvetica, Arial;
     background-color: whitesmoke;
+    padding: 20px;
+
 }
 .card{
     background-color: white;
@@ -12,12 +14,14 @@ body{
     margin: auto;
     border-radius: 10px;
     box-shadow: 3px 3px 50px rgb(204, 204,204) ;
+    
 }
 .image{
     height: 200px;
     background-image: url(/image/índice.jpeg);
     background-size: cover;
-    background-position: center;
+    background-position: center;   
+    border-radius: 10px;
 }
 .login-form{
     display: flex;
@@ -26,14 +30,16 @@ body{
     padding-left: 50px;
     padding-right: 50px;
     }
+    
     form{
         width: 100%;
     }
-    h3{
+
+    h3,a {
         align-self: flex-start;
-    }
+       }
     input,button{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         background-color: white;
         height: 35px;
         width: 100%;
@@ -48,5 +54,55 @@ body{
         border-radius: 10px;
         border:white 1px;
         cursor: pointer
-        transition: backgroud-color 0.3s;
+        
     }
+    #submit:hover{
+        background-color: #7e3af2;
+    }
+
+
+    .line{
+        border:solid 1px gray;
+        width: 100%;       
+       
+    }
+    button{
+        border: rgb(197, 197,197) 1px solid;
+        cursor: pointer;
+        transition: bakground-color 0.3s;
+    }
+    button:hover{
+        background-color: rgb(245,245,245);
+        padding-bottom: 20px;
+
+    }
+
+    i{
+     margin-right: 10px;
+    }
+  a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #7e3af2;
+    transition: color 0.3s;  
+ }
+
+ a:hover{
+     color: #6c2bd9;
+ }
+
+ @media only screen and (min-width:1000px) {
+     .card{
+         display: flex;
+         width: 800px;
+         height: 500px;
+     }
+     
+     .login-form{ width: 50%;}
+     
+     .image{ height: 100%;
+    width: 50%;
+      }
+
+ }
