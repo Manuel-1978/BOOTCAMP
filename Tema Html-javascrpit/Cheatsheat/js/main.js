@@ -3,7 +3,7 @@ function saludo() {
     alert("Hola desde un script interno");
     console.log("has hecho click");
     }
-    document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
+   //n document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
  //------------------Depuración / logging----------
 //--alert("Mensaje");
 console.log("");
@@ -115,7 +115,7 @@ console.log("1"+1, "1"-1);
  
 //------------------------objects---------------------
 
-let person = {
+let person = {//Curly Brackets
   name: "John",
   age: 30,
   blonde: false,
@@ -147,3 +147,77 @@ console.log(person.children[0], person.children[1]);
 
 person.walk();
 person.jump();
+
+//this
+const person2={
+  name:"Thomas",
+  talk(){
+    console.log(this);
+console.log(`Me llamo ${this.name}`);
+  }
+}
+
+const person3={
+  name:"Sarah",
+  talk(){
+    console.log(this);
+console.log(`Me llamo ${this.name}`);
+  }
+}
+
+person2.talk();
+person3.talk();
+person2.talk(this);
+//---------------------Arrays------------------------
+let selectedColors=["red","blue"]; //Array de stirngs
+console.log(selectedColors,selectedColors.length, typeof selectedColors);
+
+selectedColors[2] = "green";
+console.log(selectedColors,selectedColors.length);
+//----aqui añadimos un nuevo elemento a la array con push
+selectedColors.push("violet","white");
+console.log(selectedColors,selectedColors.length);
+//----con pop quita el ultimo elemento
+selectedColors.pop();
+console.log(selectedColors,selectedColors.length);
+//----mete un nuevo elemento en el comienzo del array
+selectedColors.unshift("white");
+console.log(selectedColors,selectedColors.length);
+//--igual que el pop pero por el inicio
+selectedColors.shift();
+console.log(selectedColors,selectedColors.length);
+//me ordena de manera alfabetico o por objetos 
+selectedColors.sort();
+console.log(selectedColors,selectedColors.length);
+//--te imprime el orden de donde este posicionado el elemento
+console.log(selectedColors.indexOf("red"));
+
+console.log("El rojo esta en el indice",selectedColors.indexOf("red"));
+//-----te muestra el comeinzo el el final
+console.log(selectedColors.slice(1,3));
+console.log(selectedColors);
+//---te muestra los elementos borrados y tu array se modifica 
+console.log("Los elementos borrados son: ",selectedColors.splice(1,2));
+console.log("El array se ha quedado asi: ",selectedColors);
+/*
+Crear un objeto 'niño' que tenga las propiedades: nombre,altura,genero y amigos. 
+Amigos estara inicialmente vacio y añadiremos posteriormente tres elementos con los
+nombres de cada amigo.Despues, añadiremos uno extra al inicio.
+*/
+let child ={
+  name: "Paco",
+  height: 1.58, 
+  gender:"male",
+  friends:["Pedro"],
+  lostfriend(){
+    this.friends.pop()
+  }
+}
+child.friends.push("Maria","Josua","Manuel");//añadir push
+console.log(child.friends);
+
+child.friends.unshift("Gustavo Adolfo");//añadir nuevo elemento al comienzo
+console.log(child.friends);
+
+child.lostfriend();
+console.log(child);
