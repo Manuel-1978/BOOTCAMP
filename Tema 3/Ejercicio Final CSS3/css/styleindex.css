@@ -99,14 +99,25 @@ color:#e02424;
      text-emphasis-color: #f4f5f7;       
      border:white 1px;
      cursor: pointer;
+  
  }
 .box:hover{
     text-emphasis-color: #24262d;
-    
+  scroll-margin-left:1px color  #6c2bd9 ;
     margin-left: 1px color  #6c2bd9;
 }
- .bold {font-weight: bold;}
-
+ p, i {
+     font-weight: bold;
+     padding-left: 20px;
+     color:    #787d88;
+     transition:color 0.3s;
+}
+i:hover{
+    color:  #24262d;
+}
+p:hover{
+    color:  #24262d;
+}
 
 /*boton de productos*/
 .add-products
@@ -129,7 +140,6 @@ color:#e02424;
      height: 700px;
      margin-top:   #24262d ;
      display: grid;
-     grid-template-columns: 1fr;
-     
+     grid-template-columns: 1fr;    
    
  }
