@@ -118,14 +118,20 @@ console.log("1"+1, "1"-1);
 let person = {//Curly Brackets
   name: "John",
   age: 30,
-  blonde: false,
+  blonde: true,
   walk: function(){
     console.log("Hey estoy andando");
   },
   jump(){
     console.log("Hey, estoy saltando.");
-  }//Pre-ES6
+    
+  },//Pre-ES6
+  presentarse(){
+    console.log(`Me llamo ${this.name},tengo ${this.age}y ${this.blonde ? "Soy rubia": "soy morenaza"}`);
+  }
+  
 }
+person.presentarse();
 //Acceso por punto/ Dot natation
 console.log(typeof person,person);
 console.log(`Se llama ${person.name} y tiene ${person.age} años.`);
@@ -199,7 +205,7 @@ console.log(selectedColors);
 //---te muestra los elementos borrados y tu array se modifica 
 console.log("Los elementos borrados son: ",selectedColors.splice(1,2));
 console.log("El array se ha quedado asi: ",selectedColors);
-/*
+/*Ejercicio
 Crear un objeto 'niño' que tenga las propiedades: nombre,altura,genero y amigos. 
 Amigos estara inicialmente vacio y añadiremos posteriormente tres elementos con los
 nombres de cada amigo.Despues, añadiremos uno extra al inicio.
@@ -209,7 +215,7 @@ let child ={
   height: 1.58, 
   gender:"male",
   friends:["Pedro"],
-  lostfriend(){
+  loseFriend(){
     this.friends.pop()
   }
 }
@@ -219,5 +225,137 @@ console.log(child.friends);
 child.friends.unshift("Gustavo Adolfo");//añadir nuevo elemento al comienzo
 console.log(child.friends);
 
-child.lostfriend();
+child.loseFriend();
 console.log(child);
+ 
+//-------------------------Condicionales--------------------
+const randomNumber=9;
+const gessedNumber = "5";
+if(typeof randomNumber !== typeof gessedNumber){
+  console.log("Hey, tienes que introducir el mismo tipo.");
+} 
+
+//if(randomNumber===gessedNumber){
+//console.log("Has acertado el número");
+//} else if (randomNumber > gessedNumber){
+ // console.log("El nuemro secreto es mayor");
+
+//} else{
+//console.log("El numero secreti es menor");
+//}
+
+//Ternary operator
+
+let variable = 12 < 10 ? " el  primero es menor" : "el primero es mayor";
+console.log(variable);
+
+// Switch
+let option = 3;
+switch(option){
+  case 1:
+    //Bloque de codigo para valor 1
+    console.log("Option vale 1");
+    break;
+  case 2:
+    //Bloque de codigo para valor 2
+    console.log("Option vale 2");
+    break;
+    case 3:
+   //Bloque de codigo para valor 3
+    console.log("Option vale 3");
+    break;
+    default:// "De otro modo" de Pseint
+    console.log("otra opcion");
+    break;
+}
+
+//----------------------------Funciones/ Functions-----------------
+//Nombradas
+function greet(name,lastname){
+  console.log(`Hola,${name} ${lastname}.¿Que tal?`);
+  }
+
+  greet();
+  greet("Marcos","Aurelio");
+
+// Que devuelva el cuadrado de un numero que recibe por parametro
+function square(number){
+    let square = number * number;
+    return square;
+}
+console.log(square(5)); 
+
+// -------------Anonimas--------
+let numbersArray =[5,51,1,15,2];
+console.log(numbersArray);
+numbersArray.sort();// Me lo ordena según ASCII
+console.log(numbersArray);
+
+/*
+
+ */
+
+function orderNumbers (a,b){
+    if(a<b){
+      return -1;
+    } else if (a===b){
+      return 0;
+    } else{
+      return 1;
+    }
+}
+
+
+//numbersArray.sort(orderNumbers);
+
+numbersArray.sort(function (a,b){return a- b});//funcion anonima
+ console.log(typeof orderNumbers, typeof function (a,b){return a- b} );
+console.log(numbersArray);
+
+/* ----------------Funciones de flecha /Arrow Functions-----------*/
+let perimeterOfSquare = function (side) { // Función anónima normal
+  return side * 4;
+  }
+  perimeterOfSquare = function (side) {return side * 4;} // (opcional) Una única línea
+  perimeterOfSquare = (side) => {return side * 4;} // Sustituyo function por la flecha después de params.
+  perimeterOfSquare = (side) => side * 4; // Si sólo quiero devolver algo, quito llaves y return.
+  perimeterOfSquare = side => side * 4; // Si sólo tiene 1 param, puedo quitar paréntesis.
+  
+  console.log(perimeterOfSquare(5));
+ 
+  //Como transformar func anonima en funcion de flecha
+  numbersArray.sort(function (a,b){return a- b})
+  numbersArray.sort((a,b)=>a-b);
+
+  let squareV2 = number=> number*number;
+  console.log(squareV2(5));
+
+  /*-------------Loops------------------*/
+//For
+  for(let i=0;i <=10;i++){
+    console.log(`Indice: ${i}`);
+  }
+//Definir y rellenar un array con el indice i
+const arrayFor = [];
+
+for (let i = 0 ; i <= 10; i++) {
+    arrayFor.push(i);
+  }
+  console.log(arrayFor);
+
+  //while
+  let contador= 0;
+  while( contador<= 10){
+    console.log(contador);
+    contador++;
+  }
+ while(true){
+   break;
+}
+console.log("No entra en bucle infinito");
+
+//ForEach
+
+numbersArray.forEach(function(valeu,index) {
+   console.log(`Indice ${index}:${valeu}`);    
+});

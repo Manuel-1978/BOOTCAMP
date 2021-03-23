@@ -159,13 +159,14 @@ p:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: white;
+
     
     
-    }
-    .block{
-        margin: 10px;
+}
+.block{
+     margin: 10px;
     padding: 1rem;
-        display: flex;
+     display: flex;
     align-content: center;
     align-items: center ;
-    }
+}
