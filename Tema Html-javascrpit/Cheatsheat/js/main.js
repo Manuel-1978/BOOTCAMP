@@ -199,7 +199,7 @@ console.log(selectedColors,selectedColors.length);
 console.log(selectedColors.indexOf("red"));
 
 console.log("El rojo esta en el indice",selectedColors.indexOf("red"));
-//-----te muestra el comeinzo el el final
+//-----te muestra el comienzo del el final
 console.log(selectedColors.slice(1,3));
 console.log(selectedColors);
 //---te muestra los elementos borrados y tu array se modifica 
@@ -355,7 +355,45 @@ for (let i = 0 ; i <= 10; i++) {
 console.log("No entra en bucle infinito");
 
 //ForEach
-
-numbersArray.forEach(function(valeu,index) {
+ console.log(numbersArray);
+numbersArray.forEach (function(valeu,index) {
    console.log(`Indice ${index}:${valeu}`);    
 });
+
+numbersArray.forEach ((valeu,index) => console.log(`Indice ${index}:${valeu}`));
+//Copiar un array a otro vacio
+let otherArray = [];
+console.log(otherArray);//Cuidado con consola del navegador
+numbersArray.forEach(item=> otherArray.push(item));
+console.log(otherArray);
+//For Of
+for(let item of numbersArray){
+  console.log(item);
+}
+//Continue
+for(let i=0;i<5;i++)
+{
+  if(i===3){
+    continue// Salta a la siguiente iteracion
+  }
+  console.log("Using continue",i);
+}
+//Break
+let i=0;
+let k=0;
+mainLoop:while(true){
+  console.log("Outer loop",i);
+  i++;
+  k=1;
+
+  while(true) {
+    console.log("Inner loop",k);
+    k++;
+    if (i===5 && k===5){
+      break mainLoop;
+    }else if (k ===5 ){
+      break;
+    }
+  }
+}
+
