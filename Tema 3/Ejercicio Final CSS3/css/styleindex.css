@@ -126,7 +126,7 @@ i:hover{
 p:hover{
     color:  #24262d;
 }
- .add-products,{
+ .add-products {
      justify-content: space-between;
  }
 
@@ -211,5 +211,26 @@ height: 50px;
     }
 }
 
-
-  
+/*------------------------------table-------------------------------*/
+.table{
+    margin: 2rem 0;
+table-layout: auto;
+width: 100%;
+border-collapse: collapse;
+border-radius: 0.5rem;
+border-style: hidden; /* oculta el (collapsed) border */
+box-shadow: 0 0 0 1px #c9c9c9; /* dibuja table border  */
+display: grid;
+grid-template-rows: max-content;    
+}
+tbody tr {
+    border: 1px solid #c9c9c9;
+    background-color: white;
+}
+th,
+tfoot td {
+    color: grey;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1rem;
+}
