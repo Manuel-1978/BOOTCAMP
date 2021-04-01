@@ -8,7 +8,7 @@ function saludo() {
 //--alert("Mensaje");
 console.log("");
 
-//-----------------Variables------------------------
+//-----------------VARIABLES------------------------
 // var -> function scope
 // let / const -> block scope
 
@@ -44,7 +44,7 @@ const x = 1;
 // x = 2; // Da error, no se puede reinicializar una constante
 
 console.clear();
- //------------------tipos de datos -----------------------
+ //------------------TIPOS DE DATOS -----------------------
  // Datos primitivos
  letstr=String("i'ma string");
  let str2="i'm another string"; //Recomendada
@@ -100,7 +100,7 @@ console.log(str.toUpperCase());
 console.log(`El dia del cumpleaños de mi mujer es ${day}`); //String template
 console.log("El dia de mi cumpleaños es",day,"." );
 
-//Parasing-parseo(es la combersion de un objeto a o otro)
+//Parasing-parseo(es la conversion de un objeto a o otro)
 let number = Number("algo"); //NaN = Not a Number.No se genera error.
 console.log(number,typeof number);
 
