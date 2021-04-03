@@ -204,9 +204,98 @@ mixArray=(a,b) =>`${typeof a} y ${typeof b}`
 console.log(mixArray(5,"green"));
 
 //21. Función que dado un array de números con formato string devuelva un 
-//array con los números ya parseados.
+//array con los números ya parseados. 
+
+let araParsing=["1.5", "10", "0"];
+console.log(araParsing);
+araParsing = araParsing.map(Number);
+console.log( araParsing);
+
+//22. Crea una función de flecha que devuelva “Positivo” si el número que recibe 
+//por argumento es mayor o igual que cero y “Negativo” en caso contrario. Usa el
+// operador ternario.
+
+let i= 2;
+resultadoPolarizado = (i=0 | i>0) ? console.log(`El resultado es positivo`) : console.log(`El resultado es negativo`);
+
+let i2=-2;
+resultadoPolarizado = (i2=0 | i2>0) ? console.log(`El resultado es positivo`) : console.log(`El resultado es negativo`);
+
+//23. Crea una función que dado un array cualquiera y un índice, borre el 
+//elemento guardado en ese índice.
+
+let array23 =[2];
+array23.forEach ((valeu,index) => console.log(`Indice ${index}:${valeu}`));
+array23.forEach(item=> array23.shift(item));
+console.log(array23);
+
+//24. Usando la función del apartado anterior, crea otra función que dado un array
+// de números y un número a filtrar, devuelva un array borrando todos las apariciones
+// de dicho número.
+let array24 = [2,4,5];
+let newarray24 = array24.filter(item =>{
+      return item > 2}); 
+
+console.log(`el array inicial es: `, array24);
+console.log(`el nuevo array inicial es: `,newarray24);
+;
+
+//25. Crea dos funciones que recibirán un objeto, la primera devolverá un array con 
+//los nombres de todas sus propiedades. La segunda devolverá un array con los valores
+// de dichas propiedades.
+//Investigar los métodos keys y values del prototipo de Object.
+const objeto25 ={
+    Caracteristica: "persona",
+    tamaño: 30,
+    utilidad: "generar riqueza",
+};
+   console.log(objeto25);
+   console.log(Object.keys(objeto25));
+   console.log(Object.values(objeto25));
+   
+//26. Crea una función que invierta un string.
+   function fraRev(fra) {
+       let myfrass =" ";
+       for( let i= fra.length-1;i>0;i--){
+     myfrass=myfrass+fra.charAt(i);
+       }
+        return myfrass;
+   }
+console.log(fraRev(" Esto es una prueba"));
+
+   //27. Crea una función que compare strings sin tener en cuenta 
+   //las mayúsculas / minúsculas.
+    function compare ( string_1 , string_2) {
+        string_1 = "";
+        string_2 = "";
+        string_1.toLowerCase() == string_2.toLowerCase();
+
+     if (string_1 == string_2) { return `Son iguales`}               
+     else{ return`Son diferentes`}
+    };
+
+console.log(compare("HOLA","Hola"));
 
 
-  let numberString= Number("1","2","3","4","5");
+   //28. Crea una función que convierta en mayúscula sólo la primera letra de
+   //cada palabra de un string dado. El apartado 11 será de ayuda.
+   // Investigar cómo unir un array de strings en un único string.
 
-    console.log(`Los numeros son ${numberString}`); 
+
+const vamosParriva ="sin mi no hay un mañana";
+ const arr1 = vamosParriva.split('');
+const primeraLetra = arr1.map(function(arr1) {
+    return arr1;
+})
+arr1.shift(0);
+arr1.unshift("S");
+arr1.slice();
+
+console.log(arr1.join(""));
+
+
+  // 29. Crea una función en una única línea que reciba un valor lógico y 
+  //devuelva el opuesto.
+const negacion =(logical) => !logical;
+console.log(negacion(true));
+console.log(negacion(false));
