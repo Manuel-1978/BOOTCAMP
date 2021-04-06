@@ -264,38 +264,43 @@ console.log(`el nuevo array inicial es: `,newarray24);
 //los nombres de todas sus propiedades. La segunda devolverá un array con los valores
 // de dichas propiedades.
 //Investigar los métodos keys y values del prototipo de Object.
-const objeto25 ={
+const obrero ={
     Caracteristica: "persona",
     tamaño: 30,
-    utilidad: "generar riqueza",
+    Utilidad: "generar riqueza",
 };
-   console.log(objeto25);
-   console.log(Object.keys(objeto25));
-   console.log(Object.values(objeto25));
+function propiedadeskeys (objeto){return Object.keys(objeto)};
+function propiedadesvalues (objeto){return Object.values(objeto)};
+function propiedadeskeys (objeto){return Object.entries(objeto)};
+   console.log(propiedadeskeys(obrero));
+   console.log(propiedadeskeys(obrero));
    
 //26. Crea una función que invierta un string.
    function fraRev(fra) {
        let myfrass =" ";
-       for( let i= fra.length-1;i>0;i--){
-     myfrass=myfrass+fra.charAt(i);
+       for( let i= fra.length-1;i>=0;i--){
+     myfrass+=fra.charAt(i);
        }
         return myfrass;
    }
-console.log(fraRev(" Esto es una prueba"));
-
+   function stringInvertido(texto){
+       return texto.split("").reverse().join("");
+   }
+console.log(fraRev("Esto es una prueba"));
+console.log(stringInvertido("Esto es una prueba"));
    //27. Crea una función que compare strings sin tener en cuenta 
    //las mayúsculas / minúsculas.
     function compare ( string_1 , string_2) {
-        string_1 = "";
-        string_2 = "";
-        string_1.toLowerCase() == string_2.toLowerCase();
+       // string_1 = "";
+       // string_2 = "";
+      return  string_1.toLowerCase() == string_2.toLowerCase();
 
-     if (string_1 == string_2) { return `Son iguales`}               
-     else{ return`Son diferentes`}
+    // if (string_1 == string_2) { return `Son iguales`}               
+    // else{ return`Son diferentes`}
     };
 
 console.log(compare("HOLA","Hola"));
-
+console.log(compare("Martin","Fermin"));
 
    //28. Crea una función que convierta en mayúscula sólo la primera letra de
    //cada palabra de un string dado. El apartado 11 será de ayuda.
@@ -306,6 +311,7 @@ const vamosParriva ="sin mi no hay un mañana";
  const arr1 = vamosParriva.split('');
 const primeraLetra = arr1.map(function(arr1) {
     return arr1;
+    
 })
 arr1.shift(0);
 arr1.unshift("S");

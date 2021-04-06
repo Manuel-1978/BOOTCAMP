@@ -23,7 +23,7 @@ console.log (parent1,parent2);
 const children = document.getElementsByClassName("child");
 console.log(children);
 //selecion un selector completo(query)------------
-let element = document.querySelectorAll(".grandparent div");
+let element = document.querySelector(".grandparent div");
 
 parent1.style.backgroundColor = "#333";
 
@@ -50,7 +50,7 @@ const changeBackground = (element, color) => element.style.backgroundColor = col
  parent1.classList.remove("bg-dark");
  parent1.classList.add("bg-red");
  console.log("Classlist: ",parent1.classList);
-
+//parent1.className = "d-fle" Acciona sobre todos las class
  parent1.classList.toggle("bg-red");
  //toggle: Alterna la clase, si no esta, la incluye,si esta, la elimina.
 
