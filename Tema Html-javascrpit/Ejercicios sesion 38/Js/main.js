@@ -106,7 +106,49 @@ document.querySelector("#colorsSelect").addEventListener("change",e =>{
 //10. Incluir un botón que al pulsarlo genere un número aleatorio y
 // mantenga en una lista actualiza el número de elementos que se han generado, 
 //los que son pares y los que son impares
-function numAleatorios() {
-   let numAle= parseint(Math.random()*100);
-  if (numAle %2==0){return }
-}
+const currentRandom = document.getElementById("currentRandom");
+const totalNumber = document.getElementById("totalNumbers");
+const oddNumbers =document.getElementById("oddNumbers");
+const evenNumbers =document.getElementById("evenNumbers");
+
+document.getElementById("randomButton").onclick=()=>{
+  const randomNumber = Math.floor(Math.random()*100);
+  currentRandom.textContent = randomNumber;
+  totalNumber.textContent++;//totalNumber.textContent= Number(totalNumber.textContent)+1;
+randomNumber % 2===0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
+
+};
+  
+//function numAleatorios() {
+//   let numAle= parseint(Math.random()*100);
+//if (numAle %2==0){return }
+//}
+//11. Construir una lista que tenga números. Añadir un input donde poder
+// añadir números y un botón. Al pulsar el botón, si el número ya existe 
+//en la lista, mostrar un mensaje de error, si no existe, lo añadirá al 
+//principio.
+
+
+
+//12. Crearemos una clase .btn en CSS que le de ciertos estilos a un botón.
+// Al hacer click en el botón haremos “toggle” o alternaremos esa clase, 
+//es decir, si está presente la quitaremos y si no está, la añadiremos.
+
+document.querySelector("#toggler").onclick =(e)=>e.target.classList.toggle("btn");
+
+
+//Apartado Extra: Refactorizar.
+
+let buttons = document.getElementsByClassName("btn-red");
+
+Array.from(buttons).forEach( button=> button.onclick= e =>{ 
+
+   e.target.style.backgroundColor="red";
+});
+// Solucion 2
+buttons = document.querySelectorAll(".btn-red");
+buttons.forEach( button=>
+    button.addEventlistener ()= e =>{ 
+
+   e.target.style.backgroundColor="red";
+});
