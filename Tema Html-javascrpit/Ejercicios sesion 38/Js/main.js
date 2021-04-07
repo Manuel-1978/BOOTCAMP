@@ -123,12 +123,34 @@ randomNumber % 2===0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
 //   let numAle= parseint(Math.random()*100);
 //if (numAle %2==0){return }
 //}
+
 //11. Construir una lista que tenga números. Añadir un input donde poder
 // añadir números y un botón. Al pulsar el botón, si el número ya existe 
 //en la lista, mostrar un mensaje de error, si no existe, lo añadirá al 
 //principio.
+const ulApt11= document.getElementById("ulApt11");
+const inputApt11 = document.getElementById("inputApt11");
+const buttonApt1 = document.getElementById("buttonApt1");
+let numbersList = [];
+
+function fillNumber() {
+   const num = inputApt11.value;
+   if ( numbersList.includes(num)){
+      alert("error");
+   }else {
+      const li = document.createElement('li');
+      ulApt11.prepend(num);
+      li.textContent = num;
+      numbersList.push(num);
+   }
+   
+   };
+
+buttonApt1,addEventListener("click",fillNumber);
 
 
+
+   
 
 //12. Crearemos una clase .btn en CSS que le de ciertos estilos a un botón.
 // Al hacer click en el botón haremos “toggle” o alternaremos esa clase, 
