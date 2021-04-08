@@ -1,4 +1,4 @@
-
+//se crea un Constructor 
  function User(name, firstLastName,secondLastName,email, age, city,) {
     this.name = name;
   this.firstLastName = firstLastName;
@@ -26,13 +26,13 @@ let users = [
  const incrementButton = document.querySelector("#incrementButton");
  const emtyButton = document.querySelector("#emptyButton");
 
-//Rellenar Select conopciones
+//Rellenar Select con opciones
 //for (let user of users) {    
    // const newOption= document.createElement("option");
    // newOption.textContent = user.name;
    // select.appendChild(newOption);
 //}
-users.forEach(user => {
+users.forEach(user => { 
     const newOption= document.createElement("option");
     newOption.textContent = user.name;
     select.appendChild(newOption);
