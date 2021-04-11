@@ -32,6 +32,7 @@ let users = [
    // newOption.textContent = user.name;
    // select.appendChild(newOption);
 //}
+
 users.forEach(user => { 
     const newOption= document.createElement("option");
     newOption.textContent = user.name;
@@ -47,7 +48,7 @@ users.forEach(user => {
         
         const newListItem = document.createElement("li");
         newListItem.innerHTML=`<b>${propertyName}:</b>${value}`;
-        newListItem.classList.add("list-group-item")
+        newListItem.classList.add("list-group-item");
         list.appendChild(newListItem);
        // list.innerHTML += `<li class='list-group-item´><b>${propertyName} : <b> ${value}</li>`
         }
