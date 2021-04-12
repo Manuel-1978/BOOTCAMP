@@ -25,7 +25,10 @@ let books=[
 const listBook= document.querySelector("#listbook");
 const addbook= document.querySelector("#addBook");
 const eliminateBook= document.querySelector("#eliminateBook");
-
+const titleNewBook= document.querySelector("#titleInput");
+const saleBook= document.querySelector("#salesInput");
+const priceBook= document.querySelector("#priceInput");
+const addNewBook= document.querySelector("#addBook");
 
 //Rellenar tabla
 
@@ -57,5 +60,8 @@ function openLibrary(){
 };
 
 openLibrary();
+ 
+function deleteBook ( )
+{
 
-
+};
