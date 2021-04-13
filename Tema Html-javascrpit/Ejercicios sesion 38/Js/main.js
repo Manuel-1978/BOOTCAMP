@@ -168,7 +168,7 @@ Array.from(buttons).forEach( button=> button.onclick= e =>{
    e.target.style.backgroundColor="red";
 });
 // Solucion 2
-buttons = document.querySelectorAll(".btn-red");
+let buttons = document.querySelectorAll(".btn-red");
 buttons.forEach( button=>
     button.addEventlistener ()= e =>{ 
 
