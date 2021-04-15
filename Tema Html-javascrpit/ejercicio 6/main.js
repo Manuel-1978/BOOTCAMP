@@ -11,14 +11,20 @@ function fillList (comments){
         ul.innerHTML += `<li>${comment.name}</li>`
     });
 }
-
+function paginator(items,current_page,per_page_items){
+  let page= current_page||1,
+  per_page= per_page_items||20,
+  offset=(page-1)*per_page,
+  paginatedItems =items.slice(offset).slice(0,per_page_items),
+  total_pages= Math.ceil(items.lenght/per_page);
+}
 
 const URL1 ="https://jsonplaceholder.typicode.com/posts"
  
 const container= document.getElementById("container");
 
 function titleComents (posts){
-    posts.slice(0.20).forEach(post=>{
+    posts.forEach(post=>{
         container.innerHTML += `<h2>${post.title}</h2><p>${post.body}</p>`
     })
 }
@@ -46,6 +52,19 @@ fetch(URL1)
     })
         .then(data => {
         titleComents(data);
+         })
+.catch(error=>console.log(error));
+
+fetch(URL1)
+  .then(response =>{
+      console.log(response);    
+        if(response.ok){
+       return response.json();
+      }
+      throw Error ("Hay algún problemas con la respuesta: "+ response.statusText)
+    })
+        .then(data => {
+        paginator(data);
          })
 .catch(error=>console.log(error));
 

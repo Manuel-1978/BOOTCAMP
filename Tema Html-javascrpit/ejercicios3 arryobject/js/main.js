@@ -46,17 +46,17 @@ employees.sort(function (emp1,emp2){ return emp1.rendimiento-emp2.rendimiento});
 
 //3. Ordenar el array por salario e imprimirlo. Usar una función de flecha.
 employees.sort((emp1,emp2) => emp1.salario-emp2.salario);
-console.log("3-ordenador por rendimiento",employees);
+console.log("3-Ordenado por rendimiento",employees);
 //4 Ordenar el array por el número de empleado de forma decreciente.
 //El número de empleado sólo estará dentro del string Cargo. 
 //Usar una función nombrada como callback.
 
 function ordenarDecreciente(emp1,emp2) {
-     return emp1.cargo.slice(9)-emp2.cargo.slice(9);
-     return emp2.cargo.split(" ")[1]-emp1.cargo.split(" ")[1];
+     //return emp1.cargo.slice(9)-emp2.cargo.slice(9);
+     //return emp2.cargo.split(" ")[1]-emp1.cargo.split(" ")[1];
      return emp2.cargo.replace("Empleado","")- emp1.cargo.replace("Empleado","");
 
-    
+   
 };
 
 employees.sort(ordenarDecreciente);
@@ -95,7 +95,7 @@ console.log(totalCost);
 // • Calcular el sueldo medio de la empresa.
 // • Subir el sueldo de los que tengan un rendimiento superior a 0.7
 employees=employees.filter(employee=>employee.rendimiento>=0.3);
-console.log("8.1:Despedir a los uqe tengan un rendimiento menor a 0.3",employees);
+console.log("8.1:Despedir a los que tengan un rendimiento menor a 0.3",employees);
 
 let averageSalary = employees.reduce((salarySum,employee)=> salarySum + employee.salario,0)/employees.length;
 averageSalary = averageSalary.toFixed(2);
