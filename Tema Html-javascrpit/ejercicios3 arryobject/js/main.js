@@ -47,6 +47,7 @@ employees.sort(function (emp1,emp2){ return emp1.rendimiento-emp2.rendimiento});
 //3. Ordenar el array por salario e imprimirlo. Usar una función de flecha.
 employees.sort((emp1,emp2) => emp1.salario-emp2.salario);
 console.log("3-Ordenado por rendimiento",employees);
+
 //4 Ordenar el array por el número de empleado de forma decreciente.
 //El número de empleado sólo estará dentro del string Cargo. 
 //Usar una función nombrada como callback.
@@ -84,7 +85,7 @@ console.log(employees);
 // 7. Usando reduce: Obtener el coste total de todos los sueldos
 //  para la empresa teniendo en cuenta que a la empresa le cuesta 
 //  tener un empleado su sueldo más un 15% por impuestos. 
-const totalCost = employees.reduce((salarySum,employee)=> salarySum+ employee.salario*1.15,0);
+const totalCost = employees.reduce((salarySum,employee)=> salarySum + employee.salario*1.15,0);
 console.log(totalCost);
 
 
