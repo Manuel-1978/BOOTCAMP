@@ -1,16 +1,15 @@
 
 import './App.css';
-import FirstComponent from './components/FirstComponent';
+import FirstComponent,{SecondComponent, ThirdComponent} from './components/FirstComponent';
 
 function App() {
   return (
     <div className="App">
-     <FirstComponent />
-     <FirstComponent />
-     <FirstComponent />
-     <FirstComponent />
-     <FirstComponent />
-     <FirstComponent />
+     <FirstComponent title="Titulo enviado desde el padre" date="16 de agosto de 2025" />
+     <FirstComponent title="Otro titulo" date="17 de agosto de 2025" />
+     <SecondComponent />
+     <ThirdComponent />
+     
      
     </div>
   );
