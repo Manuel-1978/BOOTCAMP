@@ -3,7 +3,7 @@ import './App.css';
 import Card from './components/card';
 function App() {
   return (
-    <div className="App">
+    <div className="row p-4 m-5">
       <Card 
       title="Título 1"
       paragraph="Lorem ipsum dolor sit amet."
