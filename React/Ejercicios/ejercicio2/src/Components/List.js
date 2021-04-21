@@ -2,16 +2,22 @@
 
 
 
-export default function List(props) {
-    const Shop= [Shop];
+export default function List({category,products}) {
+    
     
     return (
         <div>
-          <ol>
+            <h2>{category}</h2>
+          <ul className= "w-50 m-auto">
               {
-                  Shop.map(Shop => <li key={Shop.props}>{Shop}</li>)
+                  products.map(({id,products,brand,modelo,price})=>
+                    { 
+                    return <li key={id} className="list-group-item list-group-item-success">
+                    {id} &nbsp; {products}&nbsp;{brand}&nbsp;{modelo}&nbsp; Price:{price}
+                    </li>
+                    })
               }
-              </ol>  
+              </ul>  
 
         </div>
     )
