@@ -6,9 +6,9 @@ import NewContactForm from './Componenst/NewContactForm';
 function App() {
 
 const initialContactsState =[
-  {name:"Francisco",lastName: "Garcia Perez", address:"Calle x",city:"Granada",postalcode:18010,phoneNumber:666235547},
-  {name:"Francisco",lastName: "Ramirez Perez", address:"Calle y",city:"Granada",postalcode:18010,phoneNumber:666235548},
-  {name:"Francisco",lastName: "Fernandez Perez", address:"Calle f",city:"Granada",postalcode:18010,phoneNumber:666235549},
+  {name:"Francisco",lastName: "Garcia Perez", address:"Calle x",city:"Granada",postalCode:18010,phoneNumber:666235547},
+  {name:"Francisco",lastName: "Ramirez Perez", address:"Calle y",city:"Granada",postalCode:18010,phoneNumber:666235548},
+  {name:"Francisco",lastName: "Fernandez Perez", address:"Calle f",city:"Granada",postalCode:18010,phoneNumber:666235549},
 ];
  const [contacts,setContacts] = useState(initialContactsState);
  

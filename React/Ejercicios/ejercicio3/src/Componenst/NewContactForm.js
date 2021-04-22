@@ -28,46 +28,59 @@ export default function NewContactForm({setContacts}) {
     // function handleCity(e) {
     //     setCity (e.target.value)
     //}
-  const InitialState={
+  const initialState={
             name:"",
             lastName:"",
             address:"",
             postalCode:"",
             city:"",
             phoneNumber:""
-   }
+   };
 
-    const[form,setForm]=useState(initialState)
+     const[form,setForm]= useState(initialState)
+
     function handleInput(e) {
-        console.log(e.target.name);
+
+        const inputName= e.target.id;
+        const newValue= e.target.value;
+        setForm({...form,...{[inputName]: newValue}})
         
-        // const newContact ={
-        //     name:name,
-        //     lastName:lastName,
-        //     address:address,
-        //     postalCode:postalCode,
-        //     city:city,
-        //     phoneNumber:phoneNumber
-        // };
-       
-    //const newContact= {name,lastName,address,postalCode,city,phoneNumber};
-       //setContacts([...contacts,newContact])//Necesitaría recibir "contacts"
-       // setContacts(currentContacts => [...currentContacts,newContact]);
-       // e.target.reset();
-   // }
+    }
+  
    function submit(e) {
-       
+       e.preventDefault();  
+   //   const newContact= {name,lastName,address,postalCode,city,phoneNumber};
+  //      //setContacts([...contacts,newContact])//Necesitaría recibir "contacts"
+        setContacts(currentContacts => [...currentContacts,newContact]);
+  //      // e.target.reset();
+        setForm(initialState);
+  //      setLastName("");
+  //      setAddress("");
+  //      setCity("");
+  //      setPostalCode("");
+  //      setPhoneNumber("");
+  //  // }
+
+       const newContact ={
+            name: form.name,
+            lastName:form.lastName,
+            address:form.address,
+            postalCode:form.postalCode,
+            city:form.city,
+            phoneNumber:form.phoneNumber
+        };
+
    }
     return (
         <form className="form-group" onSubmit={submit}>
-        <input name="name"       value={form.name}        onChange={handleInput}    className="form-control mb-3" type="text" placeholder="Introduce el nombre"/>
-        <input name="lastName"   value={form.lastName}    onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce los apellidos"/>
-        <input name="address"    value={form.address}     onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el teléfono"/>
-        <input name="postalCode" value={form.postalCode}  onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la dirección"/>
-        <input name="city"       value={form.city}        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el código postal"/>
-        <input name="phoneNumber"value={form.phoneNumber} onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la ciudad"/>
+        <input id="name"        value={form.name}        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el nombre"/>
+        <input id="lastName"    value={form.lastName}    onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce los apellidos"/>
+        <input id="phoneNumber" value={form.phoneNumber} onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el teléfono"/>
+        <input id="address"     value={form.address}     onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la dirección"/>
+        <input id="postalCode"  value={form.postalCode}  onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce el código postal"/>
+        <input id="city"        value={form.city}        onChange={handleInput} className="form-control mb-3" type="text" placeholder="Introduce la ciudad"/>
         <input type="submit" className="btn btn-success" value="Registrar"/>
         </form>
     )
   }
-} 
+ 
