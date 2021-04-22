@@ -1,21 +1,26 @@
-import React from 'react'
+import{useState} from "react";
 import './App.css';
 import ListContact from './Componenst/ListContac';
+import NewContactForm from './Componenst/NewContactForm';
 
 function App() {
-  let contactList ={
 
-   Persondata :[
-    {Contacto:0,Name:"Francisco",Surname:"Martinez",Address:"Calle del Pernambuco numero 2",City:"Oviedo",Postcode:33193 ,TelephonNumber:655448822 },
-    
-   ]
-  };
+const initialContactsState =[
+  {name:"Francisco",lastName: "Garcia Perez", address:"Calle x",city:"Granada",postalcode:18010,phoneNumber:666235547},
+  {name:"Francisco",lastName: "Ramirez Perez", address:"Calle y",city:"Granada",postalcode:18010,phoneNumber:666235548},
+  {name:"Francisco",lastName: "Fernandez Perez", address:"Calle f",city:"Granada",postalcode:18010,phoneNumber:666235549},
+];
+ const [contacts,setContacts] = useState(initialContactsState);
+ 
   return (
-    <div className="App">
-    
-    
-        <ListContact category ="Personsdata" Name={contactList.Persondata}/>
-       
+    <div className="container">
+
+    <h2 className="my-4">Agenda</h2>
+    <ListContact contacts={contacts} />
+
+    <h2 className="my-4">Formulario</h2>
+    <NewContactForm setContacts={setContacts}/>
+        
     
     </div>
   );

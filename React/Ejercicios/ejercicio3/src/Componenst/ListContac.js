@@ -1,23 +1,19 @@
-import React from 'react'
+export default function ListContac({ contacts }) {
+  return (
+  <div className="row">
+  {contacts.map((contact, index) => {
+  return (
+  <ul className="list-group mb-3 col-12 col-sm-6 col-xl-3" key={contact.phoneNumber}>
+  <li className="list-group-item active">Contacto {index + 1}</li>
+  <li className="list-group-item">{contact.name}</li>
+  <li className="list-group-item">{contact.lastName}</li>
+  <li className="list-group-item">{contact.phoneNumber}</li>
+  <li className="list-group-item">{contact.address} {contact.postalCode} {contact.city}</li>
+  </ul>
+  );
+  })}
+  </div>
+  )
+  }
 
-export default function ListContac(category,Name) {
-    return (
-     <div>
-          
-      <ul className="list-group w-50">
-          
-        <li className="list-group-item active" aria-current="true">{category}</li>
-          
-         {
-                Name.map(({id,Name,Surname,Address,city,Postcode,TelephoneNumber})=>
-                  {    
-                      <li key={id} className="list-group-item list-group-item-success">
-                       {Name}{Surname}{Address}{city}{Postcode}{TelephoneNumber}
-                    </li>
-                  })
-          }
-      </ul>
-     </div>
-    )
-}
 
