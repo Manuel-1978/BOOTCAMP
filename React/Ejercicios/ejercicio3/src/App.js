@@ -16,7 +16,7 @@ const initialContactsState =[
     <div className="container">
 
     <h2 className="my-4">Agenda</h2>
-    <ListContact contacts={contacts} />
+    <ListContact contacts={contacts} setContacts={setContacts} />
 
     <h2 className="my-4">Formulario</h2>
     <NewContactForm setContacts={setContacts}/>

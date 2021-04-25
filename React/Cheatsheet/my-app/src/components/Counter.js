@@ -1,12 +1,13 @@
 import {useState} from 'react';
-
+import FirstComponent from './FirstComponent'
 export default function Counter() {
     // const state = useState(0);
 
     // const count = useState[0];
     // const setCount = useState[1];
     const [count,setCount] = useState(0);
-const handleClick = function () {
+    
+    const handleClick = function () {
     if (count < 10){
     
     setCount(count+1);
