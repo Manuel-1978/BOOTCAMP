@@ -17,7 +17,7 @@ export default function ToDos({toDos,setTodoList}) {
                toDos.map(({userId,title,completed})=>
                    {  return <li  className="list-group-item text-left" onClick= {crossedOut} key={title}>  
                       {userId} &nbsp; {title}&nbsp;{completed}&nbsp;
-                     <button  className="tn btn-danger float-right" onClick={removeLine(title)}>x</button>
+                     <button  className="tn btn-danger float-right" onClick={()=>removeLine(title)}>x</button>
                      </li>
                } )
             }

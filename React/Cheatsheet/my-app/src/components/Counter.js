@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import FirstComponent from './FirstComponent'
+/*import FirstComponent from './FirstComponent'*/
 export default function Counter() {
     // const state = useState(0);
 

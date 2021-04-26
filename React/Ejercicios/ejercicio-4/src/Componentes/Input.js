@@ -8,7 +8,7 @@ export default function Input({setTodoList}) {
         completed:""
 };
 
-const[form,setForm]= useState(initialState)
+const[form,setForm]= useState("")
 
 function handleInput(e) {
 
@@ -20,7 +20,7 @@ function handleInput(e) {
 function submit(e) {
     e.preventDefault();
     setTodoList(currentList => [...currentList ,newList]);
-    setForm(initialState);
+    setForm("");
 
 const newList ={
             userId:form.userId,
@@ -33,7 +33,7 @@ const newList ={
 
     return (
         <form className="container-sm mr-3 p-2"onSubmit={submit} >
-           <input id="title" value={form.title}  onChange={handleInput} className=" form-control w-2000" placeholder="Introduce un nuevo To-do"/>
+           <input id="title" value={form.title}  onChange={handleInput} className=" form-control w-1500" placeholder="Introduce un nuevo To-do"/>
         </form>
     )
 }

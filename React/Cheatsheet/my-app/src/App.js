@@ -3,7 +3,11 @@ import './App.css';
 import FirstComponent,{SecondComponent, ThirdComponent} from './components/FirstComponent';
 import Counter from "./components/Counter" ;
 import UseEffectComponent from './components/UseEffectComponent';
-import { useState } from 'react';
+ 
+import { useState,createContext } from 'react';
+import UseContextComponent from './components/UseContextComponents';
+   
+export const GlobalContext= createContext();
 
 function App() {
 
@@ -11,15 +15,20 @@ function App() {
 
   return (
     <div className="App">
-   {show && <UseEffectComponent />}
+     {/*{show && <UseEffectComponent />}
 <button onClick={()=>setShow(!show)}>Show</button>
 
-     {/* <Counter />
+    <Counter />
      <FirstComponent title="Titulo enviado desde el padre" date="16 de agosto de 2025" />
      <FirstComponent title="Otro titulo" date="17 de agosto de 2025" />
      <SecondComponent />
      <ThirdComponent />
+       <UseEffectComponent/>
        */}
+       <GlobalContext.Provider value="Soy un string en un contexto">
+       <UseContextComponent />
+       </GlobalContext.Provider>
+  
      
     </div>
   );
