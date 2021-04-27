@@ -1,7 +1,8 @@
 
-import './App.css';
-import Card from './components/card';
-function App() {
+
+import Card from '../Componets/card';
+ 
+function ejercicio1() {
   return (
     <div className="row p-4 m-5">
       <Card 
@@ -23,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default ejercicio1;

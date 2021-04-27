@@ -1,26 +1,31 @@
+import"./ToDos.css";
 
-
-export default function ToDos({toDos,setTodoList}) {
-    function crossedOut(e) {
-        if(e.target.tagName !== "BUTTON"){
-            e.target.style.backgroundColor="whiteSmoke";
-            e.target.style.textDecoration="line-through";
-           ;
+export default function ToDos({todos,setTodos}) {
+    
+    const removeTodo = title =>setTodos(todos.filter( toDo => toDo.title !== title));
+    const toggleCompleted = (e,index) => {
+       
+        if (e.target.tagName !== "BUTTON"){
+          
+            const newTodos=[...todos];
+            newTodos[index].completed = !newTodos[index].completed;
+             setTodos(newTodos);
         }
-    }
-    const removeLine = title =>{return e => setTodoList(toDos.filter( toDo => toDo.title !== title))}
+};
 
     return (
         
          <ul className= "container-lg m-auto col-12 col-sm-6 " >
-            {   
-               toDos.map(({userId,title,completed})=>
-                   {  return <li  className="list-group-item text-left" onClick= {crossedOut} key={title}>  
-                      {userId} &nbsp; {title}&nbsp;{completed}&nbsp;
-                     <button  className="tn btn-danger float-right" onClick={()=>removeLine(title)}>x</button>
-                     </li>
-               } )
-            }
+            {todos.map((todo,index) => { 
+                
+                 return( 
+                        <li  className={` d-flex justify-content-between list-group-item text-left ${todo.completed ? "completed" :""}`}
+                              onClick={e=> toggleCompleted(e,index)}>  
+                               {index}:{todo.title}
+                              <span> <button  className="tn btn-danger float-right" onClick={()=>removeTodo(todo.title)}>x</button> </span>
+                        </li> 
+                    )
+            } )}
         </ul>
       
     )

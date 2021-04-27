@@ -1,24 +1,24 @@
 
 import './App.css';
-import Todos from './Componentes/ToDos';
-import Input from './Componentes/Input';
+import ToDos from './Componentes/ToDos';
+import NewTodo from './Componentes/NewTodo';
 import { useState,useEffect} from 'react';
 export default function App() {
   
-  const [TodoList,setTodoList]= useState([]);
+  const [todos,setTodos]= useState([]);
    
   useEffect(() => {
-    const URL ="https://raw.githubusercontent.com/BC-FSWD/todo-list/master/todo-list.json"
-    fetch(URL)
+    const API_TODOS ="https://raw.githubusercontent.com/BC-FSWD/todo-list/master/todo-list.json"
+    fetch(API_TODOS)
     .then(response=>response.json())
-    .then (data=> setTodoList(data.splice(0,20)));
+    .then (data=> setTodos(data.slice(0,20)));
       },[])
 
   return (
     <div className="App">
       <h3 className="container ml-3">Todo List</h3>
-      <Input setTodoList={setTodoList}/>
-      <Todos toDos={TodoList} setTodoList={setTodoList} />
+      <NewTodo setTodos={setTodos}/>
+      <ToDos todos={todos} setTodos={setTodos} />
     
     </div>
   );
