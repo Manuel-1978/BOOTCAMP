@@ -21,7 +21,7 @@ export default function Shop() {
         ]
     };  
 return(
-   <div className="container">
+   <div className="container ">
        
    <List category="electronics" products={Shop.electronics} />
    <List category="groceries" products={Shop.groceries} />
