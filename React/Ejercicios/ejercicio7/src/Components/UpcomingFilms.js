@@ -22,24 +22,8 @@ export default function UpcomingFilms() {
     return (
          <>
 
-            <h2 className='mainHeader'>Próximos estrenos</h2>
-            <div className='upcomingFilmsContainer'>
-
-               {upcomingFilmsList.map(({poster_path, title, overview, release_date, id}) => {
-
-                        const shortenOverview = `${overview.split('. ', 1).join(' ')} [...]`;
-
-                    return   (
-                    <div className="filmCard" key={id}>
-                        <img className='posterImg' src={`${POSTER_BASE_URL}${poster_path}`} alt={`Póster de ${title}`}/>
-                        <h2 className="title">{title}</h2>
-                        <p><span className='infoTag'>Descripción: </span> {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
-                        <p><span className='infoTag'>estreno: </span> {release_date}</p>
-                        <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>+</button>                        
-                    </div>)
-                })
-                }            
-        </div>
+           
+       
 
 </>
       
