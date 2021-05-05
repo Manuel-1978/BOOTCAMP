@@ -8,9 +8,10 @@ export default function Updatefilms() {
     useEffect(() => {
         fetch(`${URL_UPDATEFILMS}${id}`)
         .then(response => response.json())
-        .then(data => setdetails(data));
+        .then(data => setdetails(data.results))
         
     }, []);
+    
     
     return (
         <div className="card w-25 m-auto">
