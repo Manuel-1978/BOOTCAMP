@@ -1,3 +1,3 @@
-const URL_UPDATEFILMS ="https://api.themoviedb.org/3/movie/550?api_key=c725e8d01990fd812841de53c5cbe823";
+const URL_UPCOMINGFILMS ="https://api.themoviedb.org/3/movie/upcoming?api_key=c725e8d01990fd812841de53c5cbe823&language=es&page=";
 
-export {URL_UPDATEFILMS};
+export {URL_UPCOMINGFILMS};
