@@ -1,10 +1,10 @@
-
+import { URL_FOOTER} from '../settings'
 
 export default function Footer() {
     return (
-        <footer className="d-flex w-50 h-50">
-            <p>Info powered by</p>
-            <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="Logo TMDb"/>
+        <footer className="navbar p-5 m-5">
+            <p>Informacion monitorizada por</p>
+            <img src={ URL_FOOTER} alt="Logo TMDb"/>
         </footer>
     )
 }

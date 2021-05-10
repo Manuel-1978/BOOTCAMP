@@ -20,21 +20,19 @@ export default function Upcomingfilms() {
  
   
     return (
-        <>
+        <div className='card w-100 m-5 p-1'>
            
            
-                    <div className='card w-25 m-3 d-flex col-12 align-items-md-center'> 
+                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-4  justify-content-md-center  align-self-md-center'> 
                     
                     {movies.results?.map((movie) =>(
                     <Moviecard movie={movie} key={movie.id}/>))}
 
-                    </div>
-                    
-             
-               
+                    </div>                  
+                         
            
            
         
-        </>    
+        </div>    
     )
 }
