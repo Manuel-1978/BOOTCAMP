@@ -1,12 +1,12 @@
 {
   "name": "cheatsheet",
   "version": "1.0.0",
-  "description": "A completed API using express.",
+  "description": "A complete API using express",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "author": "Manuel",
+  "author": "ealbiol",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

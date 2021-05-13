@@ -1,17 +1,29 @@
-const express= require("express");
-const app = express();
-const mongoose= require("mongoose");
+//Importamos nuestro archivo config con las variables de entorno
+require("./config/config")
 
+const mongoose = require("mongoose");
+const express = require("express");
+const app = express();
+
+const users = require("./routes/users")
+
+//Antes de los endpoints, usamos middlewares
 app.use(express.json());
 
-app.get("/:id",(req,res)=>{
-    res.json({message:"Peticion Get recibida correctamente."});
-});
-app.get("/:id",(req, res)=>{
-    let id=req.json({})})
+app.use("/users", users);
 
+//nombre base de datos aqui
 mongoose.connect("mongodb://localhost:27017/users",{
-    useNewUrlParser:true,
-useUnifiedTopology:true,
-useCreateIndex:true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
 });
+
+const db = mongoose.connection;
+
+db.on("error", err => console.log("Connection to DB failed: ", err));
+db.once("open", () => console.log("Connected to DB successfuly"));
+
+
+app.listen(process.env.PORT, () => console.log("Listening on port ", process.env.PORT));
+
