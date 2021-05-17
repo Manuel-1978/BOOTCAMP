@@ -3,14 +3,17 @@ const bcrypt= require("bcrypt")
 const router = express.Router();
 const ramda =require("ramda");
 const User = require("../models/user");
-
+const verifyToken= require("../middlewares/auth")
 
 //1
-router.get("/", (req, res) => {
+router.get("/",verifyToken, async(req, res) => {
+    console.log("Hola desde dentro el get");
     // Similar al find de Mongo. Si el filtro está vacío,
     // me devuelve todos los documentos.
     const PAGE_SIZE=2;
     const page= req.query.page || 1;
+       
+    const count=await User.count();
 
    User.find({active:true})
    .skip((page-1)* PAGE_SIZE)//Numero de documentos qie saltara
@@ -19,7 +22,7 @@ router.get("/", (req, res) => {
     if(error) {
         res.status(400).json({ok: false, error});
     } else {
-        res.status(201).json({ok: true, users});
+        res.status(200).json({ok: true,count,results: users});
     }
    })
 });
