@@ -9,8 +9,7 @@ export default function Router() {
     
     return (
         <BrowserRouter>
-        
-         <Navbar />
+            <Navbar />
         <Switch>
             <Route exact path='/' component={Principal}/>
             <Route path="/Users" component={Users}/>
