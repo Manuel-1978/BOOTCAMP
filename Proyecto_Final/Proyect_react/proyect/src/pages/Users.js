@@ -1,12 +1,11 @@
 import Footer from '../components/Footer';
 
 
-
-export default function Principal() {
+export default function Users() {
     return (
         <div>
             
-            <div className="prueba">prueba</div>
+            <div>hola user</div>
             <Footer />
         </div>
     )

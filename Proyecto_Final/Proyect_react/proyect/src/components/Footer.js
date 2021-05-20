@@ -1,11 +1,12 @@
 
-import { Image } from 'react-native'
+import {Recursos} from './recursos';
+
 export default function Footer() {
     return (
-        <Image
-          style={{ width: 100, height: 100, marginBottom: 15 }}
-          source={require("../../public/Icons/Footer.jpeg")}
-        />
+      <div className="Footer">
+      <img src={Recursos().footer} alt="logo"></img>
+      
+      </div> 
     )
 }
 

@@ -1,38 +1,50 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navegador*/
+.Navbar{
+  background: linear-gradient(to right, rgba(218,72,14,1) 0%, rgba(255,255,255,1) 100%);
+  min-height: 20em;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content:space-between;  
+  color: white;
+  height: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar img{
+  height:18em ;
+  padding-inline-start: 10px;
+  align-items:flex-start;
 }
-
-.App-header {
+.Navbar nav{
+  font-size: xx-large;
+  justify-content:space-between;
+  text-align:justify ;  
+}
+.Navbar h1{
+justify-content:right;
+}
+/*Pie de Pagina*/
+.Footer{
+  background:linear-gradient(to left, rgb(218,72,14,1) 50%, rgba(255,255,255,1) 100%);; 
+  display: flex;   
+  color: white;
+  justify-content: flex-end;
+}
+.Footer img{
+  width: 50%;
+  height: 30em;
+  align-items:center;
+  justify-content: center; 
+}
+.prueba {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items:center;
+  justify-content: center;  
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 10px;
 }
