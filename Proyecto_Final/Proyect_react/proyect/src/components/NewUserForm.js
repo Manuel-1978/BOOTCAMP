@@ -6,9 +6,9 @@ export default function NewUsertForm({setUsers}) {
     const initialState={
             name:"",
             lastName:"",
-            address:"",
-            postalCode:"",
             identity:"",
+            email:"",
+            password:"",           
             phoneNumber:""
    };
 
@@ -31,9 +31,9 @@ export default function NewUsertForm({setUsers}) {
         const newContact ={
             name: form.name,
             lastName:form.lastName,
-            address:form.address,
-            postalCode:form.postalCode,
             identity:form.identity,
+            email:form.email,
+            password:form.password,           
             phoneNumber:form.phoneNumber
         };
 
@@ -43,9 +43,9 @@ export default function NewUsertForm({setUsers}) {
         <input id="name"        value={form.name}        onChange={handleInput} className="formInput" type="text" placeholder="Introduce el nombre"/>
         <input id="lastName"    value={form.lastName}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce los apellidos"/>
         <input id="phoneNumber" value={form.phoneNumber} onChange={handleInput} className="formInput" type="text" placeholder="Introduce el teléfono"/>
-        <input id="address"     value={form.address}     onChange={handleInput} className="formInput" type="text" placeholder="Introduce la dirección"/>
-        <input id="postalCode"  value={form.postalCode}  onChange={handleInput} className="formInput" type="text" placeholder="Introduce el código postal"/>
-        <input id="identity"        value={form.identity}        onChange={handleInput} className="formInput" type="text" placeholder="Introduce DNI-NIF-CIF"/>
+        <input id="email"       value={form.email}       onChange={handleInput} className="formInput" type="text" placeholder="Introduce Email"/>
+        <input id="password"    value={form.password}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce el password"/>
+        <input id="identity"    value={form.identity}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce DNI-NIF-CIF"/>
         <input className="formInput" type="submit"  value="Registrar"/>
         </div>
     )

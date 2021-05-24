@@ -6,7 +6,10 @@ export default function Principal() {
     return (
         <div>
             
-            <div className="prueba">prueba</div>
+            <div className="principalPage">Pagina Pricipal donde debe estar los mas grande metido y espero que no.
+            vamos a ver
+            
+            </div>
             <Footer />
         </div>
     )
