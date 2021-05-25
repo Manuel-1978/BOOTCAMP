@@ -7,6 +7,7 @@ export default function NewUsertForm({setUsers}) {
             name:"",
             lastName:"",
             identity:"",
+            company:"",
             email:"",
             password:"",           
             phoneNumber:""
@@ -23,7 +24,8 @@ export default function NewUsertForm({setUsers}) {
     }
   
    function submit(e) {
-       e.preventDefault();  
+     
+    e.preventDefault();  
    
        setUsers(currentContacts => [...currentContacts,newContact]);
         setForm(initialState);
@@ -32,6 +34,7 @@ export default function NewUsertForm({setUsers}) {
             name: form.name,
             lastName:form.lastName,
             identity:form.identity,
+            company:form.company,
             email:form.email,
             password:form.password,           
             phoneNumber:form.phoneNumber
@@ -44,6 +47,7 @@ export default function NewUsertForm({setUsers}) {
         <input id="lastName"    value={form.lastName}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce los apellidos"/>
         <input id="phoneNumber" value={form.phoneNumber} onChange={handleInput} className="formInput" type="text" placeholder="Introduce el teléfono"/>
         <input id="email"       value={form.email}       onChange={handleInput} className="formInput" type="text" placeholder="Introduce Email"/>
+        <input id="company"    value={form.company}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce nombre de Empresa"/>
         <input id="password"    value={form.password}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce el password"/>
         <input id="identity"    value={form.identity}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce DNI-NIF-CIF"/>
         <input className="formInput" type="submit"  value="Registrar"/>

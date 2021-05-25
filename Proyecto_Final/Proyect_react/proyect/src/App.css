@@ -10,7 +10,7 @@
   height: 15em;
   display: flex;   
   color: white;
- 
+  justify-content:space-between;
 }
 .Navbar img{
   height:18em ;
@@ -18,11 +18,14 @@
   align-items:flex-start;
   padding: 20px;
 }
-.Navbar nav {
-  font-size: x-large;
-  justify-content:space-between;
+.linkCustomer {
+  font-size: x-large; 
   text-align:justify ; 
-  flex-direction: row; 
+
+  display: flex; 
+  
+  align-items:flex-end ;
+  gap: 15px;
   
 }
 
@@ -67,7 +70,7 @@
 .form{
 
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -76,8 +79,20 @@
  
 }
 .form input{
-  font-size: xx-large;
-  width: 150vh;
+  font-size: x-large;
+  width: 120vh;
   height: 10vh;
   padding: 10px;
+}
+/*Acceso de usuario*/
+.userLogin{ 
+  font-size: xx-large;
+  left: 50%;
+  top: 30%;  
+  border: 1px solid rgb(10, 62, 75);
+  padding: 40px;
+  background-color: rgba(39, 23, 15, 0.747);
+}
+.userLogin2{
+  text-align: center;
 }

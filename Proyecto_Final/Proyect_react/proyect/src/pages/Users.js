@@ -1,11 +1,15 @@
 import Footer from '../components/Footer';
+import Userlogin from '../components/Userlogin';
 
 
 export default function Users() {
+    
+ 
+   
+    
     return (
         <div>
-            
-            <div className="userLogin">hola user</div>
+          <Userlogin />
             <Footer />
         </div>
     )
