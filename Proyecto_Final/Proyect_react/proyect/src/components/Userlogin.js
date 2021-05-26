@@ -1,18 +1,18 @@
 
-// import {useEffect,useState} from 'react';
-// import {URL_USERS} from '../setting';
+import {useEffect,useState} from 'react';
+ import {URL_USERS} from '../setting';
 
 export default function Userlogin() {
 
-   // const [users, setUsers] = useState({});
+   const [users, setUsers] = useState({});
 
-    // useEffect(() => {
+    useEffect(() => {
       
-    //     fetch({URL_USERS})
-    //     .then(response => response.json())
-    //     .then(data=> setUsers(data));
-        
-    // }, []);
+        fetch(URL_USERS)
+        .then(response => response.json())
+        .then(data=>{setUsers(data)});
+        console.log(users);
+    }, []);
 
 
     return (

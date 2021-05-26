@@ -26,7 +26,7 @@ export default function NewUsertForm({setUsers}) {
    function submit(e) {
      
     e.preventDefault();  
-   
+  
        setUsers(currentContacts => [...currentContacts,newContact]);
         setForm(initialState);
 
@@ -42,7 +42,7 @@ export default function NewUsertForm({setUsers}) {
 
    }
     return (
-        <div className="form" onSubmit={submit}>
+        <form className="form" onSubmit={submit}>
         <input id="name"        value={form.name}        onChange={handleInput} className="formInput" type="text" placeholder="Introduce el nombre"/>
         <input id="lastName"    value={form.lastName}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce los apellidos"/>
         <input id="phoneNumber" value={form.phoneNumber} onChange={handleInput} className="formInput" type="text" placeholder="Introduce el teléfono"/>
@@ -51,6 +51,6 @@ export default function NewUsertForm({setUsers}) {
         <input id="password"    value={form.password}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce el password"/>
         <input id="identity"    value={form.identity}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce DNI-NIF-CIF"/>
         <input className="formInput" type="submit"  value="Registrar"/>
-        </div>
+        </form>
     )
   }

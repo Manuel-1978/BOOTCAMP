@@ -7,8 +7,8 @@ export default function Principal() {
         <div>
             
             <div className="principalPage">Pagina Pricipal donde debe estar los mas grande metido y espero que no.
-            vamos a ver
-            
+            Vamos a ver.
+
             </div>
             <Footer />
         </div>

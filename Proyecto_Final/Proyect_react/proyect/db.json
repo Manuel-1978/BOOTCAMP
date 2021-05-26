@@ -1,5 +1,6 @@
+  
 {
-    "Users":[
+    "newusers":[
     {"id":1,
     "name":"Jose",
     "lastName":"Ramirez",
@@ -7,7 +8,9 @@
     "empresa":"codespace",
     "email":"jramirez@gmail.com",
     "password":"123456",
-     "phoneNumber":"987654321"},
+     "phoneNumber":"987654321",
+    "isadmin":"N"},
+
 
     {"id":2,
     "name":"Pepa",
@@ -16,7 +19,8 @@
     "empresa":"codespace",
     "email":"Pramirez@gmail.com",
     "password":"654321",
-    "phoneNumber":"987654322"}
+    "phoneNumber":"987654322",
+    "isadmin":"Y"}
 
     ]
 }
