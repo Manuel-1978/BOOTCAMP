@@ -7,6 +7,7 @@
     "identity":"74831878f",
     "empresa":"codespace",
     "email":"jramirez@gmail.com",
+    "username":"jramirez",
     "password":"123456",
      "phoneNumber":"987654321",
     "isadmin":"N"},
@@ -18,6 +19,7 @@
     "identity":"83731878d",
     "empresa":"codespace",
     "email":"Pramirez@gmail.com",
+    "username":"pramirez",
     "password":"654321",
     "phoneNumber":"987654322",
     "isadmin":"Y"}

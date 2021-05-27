@@ -9,6 +9,7 @@ export default function NewUsertForm({setUsers}) {
             identity:"",
             company:"",
             email:"",
+            username:"",
             password:"",           
             phoneNumber:""
    };
@@ -36,6 +37,7 @@ export default function NewUsertForm({setUsers}) {
             identity:form.identity,
             company:form.company,
             email:form.email,
+            username:form.username,
             password:form.password,           
             phoneNumber:form.phoneNumber
         };
@@ -46,11 +48,12 @@ export default function NewUsertForm({setUsers}) {
         <input id="name"        value={form.name}        onChange={handleInput} className="formInput" type="text" placeholder="Introduce el nombre"/>
         <input id="lastName"    value={form.lastName}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce los apellidos"/>
         <input id="phoneNumber" value={form.phoneNumber} onChange={handleInput} className="formInput" type="text" placeholder="Introduce el teléfono"/>
-        <input id="email"       value={form.email}       onChange={handleInput} className="formInput" type="text" placeholder="Introduce Email"/>
-        <input id="company"    value={form.company}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce nombre de Empresa"/>
-        <input id="password"    value={form.password}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce el password"/>
+        <input id="email"       value={form.email}       onChange={handleInput} className="formInput" type="text" placeholder="Introduce Email"/>        
+        <input id="company"     value={form.company}     onChange={handleInput} className="formInput" type="text" placeholder="Introduce nombre de Empresa"/>
+        <input id="username"    value={form.username}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce su Username"/>
+        <input id="password"    value={form.password}    onChange={handleInput} className="formInput" type="password" placeholder="Introduce el password"/>
         <input id="identity"    value={form.identity}    onChange={handleInput} className="formInput" type="text" placeholder="Introduce DNI-NIF-CIF"/>
-        <input className="formInput" type="submit"  value="Registrar"/>
+        <input id="btn-newuser" className="formInput" type="submit"  value="Registrar"/>
         </form>
     )
   }

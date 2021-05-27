@@ -2,7 +2,7 @@
   text-align: center;  
 }
 .body{
-  height: 1000px;
+  height: 1fr;
 }
 /* Navegador*/
 .Navbar{
@@ -18,15 +18,16 @@
   align-items:flex-start;
   padding: 20px;
 }
-.linkCustomer {
+.linkCustomer{
   font-size: x-large; 
-  text-align:justify ; 
-
-  display: flex; 
-  
-  align-items:flex-end ;
-  gap: 15px;
-  
+  text-align:justify ;   
+  display: flex;   
+  align-items:flex-start ;
+  gap: 40px; 
+}
+a {
+text-decoration: none;
+padding-right: 30px;
 }
 
 /*Pie de Pagina*/
@@ -57,7 +58,7 @@
 }
 /*Pagina login*/
 .userLogin{
-  background-color: #282c34;
+  background-color: rgb(48, 35, 29);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -73,16 +74,22 @@
   min-height: 120vh;
   display: flex;
   flex-direction: column;
-  align-items:center;
-  justify-content: center;  
-  color: white;
- 
+  align-items:center;   
+  color: white; 
+  padding-top: 10vh;
 }
 .form input{
   font-size: x-large;
-  width: 120vh;
-  height: 10vh;
-  padding: 10px;
+  width: 110vh;
+  height: 8vh;   
+  margin-bottom: 5px;
+  background-color:azure ;
+  align-content: 10px;
+}
+ #btn-newuser{
+  margin-top: 10px;
+  border-radius: 10px;
+
 }
 /*Acceso de usuario*/
 .userLogin{ 
@@ -93,10 +100,12 @@
   padding: 40px;
   background-color: rgb(48, 35, 29);
 }
-.userLogin2{
-  text-align: center;
+.userLogin2 input{
+  font-size: xx-large;
 }
 .userLogin2{
+  text-align: center;
+  font-size: xx-large;
   border: 3px solid rgb(3, 2, 24);
   padding: 100px;
   background-color: azure;
