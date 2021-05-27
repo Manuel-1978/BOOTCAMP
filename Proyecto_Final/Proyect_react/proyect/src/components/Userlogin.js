@@ -11,7 +11,7 @@ export default function Userlogin() {
         fetch(URL_USERS)
         .then(response => response.json())
         .then(data=>{setUsers(data)});
-        console.log(users);
+       
     }, []);
 
 
@@ -26,7 +26,7 @@ export default function Userlogin() {
                             <label >Password: </label>
                             <br/>
                             <input type="text" className="inputpassword" name="password" />
-                            <br/>
+                            <br/><br/>
                             <button className="btn-access">Iniciar Sesión</button>
                         </div>
                     </div>

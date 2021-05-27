@@ -27,7 +27,7 @@ export default function NewUsertForm({setUsers}) {
      
     e.preventDefault();  
   
-       setUsers(currentContacts => [...currentContacts,newContact]);
+      // setUsers(currentContacts => [...currentContacts,newContact]);
         setForm(initialState);
 
         const newContact ={

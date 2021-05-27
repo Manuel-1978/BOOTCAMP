@@ -46,7 +46,7 @@
 } 
 /*Pagina principal*/
 .principalPage {
-  background-color: #282c34;
+  background-color: rgb(48, 35, 29);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@
 /* Formulario de nuevo usuario*/
 .form{
 
-  background-color: #282c34;
+  background-color: rgb(48, 35, 29);
   min-height: 120vh;
   display: flex;
   flex-direction: column;
@@ -89,10 +89,24 @@
   font-size: xx-large;
   left: 50%;
   top: 30%;  
-  border: 1px solid rgb(10, 62, 75);
+  border: 3px solid rgb(3, 2, 24);
   padding: 40px;
-  background-color: rgba(39, 23, 15, 0.747);
+  background-color: rgb(48, 35, 29);
 }
 .userLogin2{
   text-align: center;
+}
+.userLogin2{
+  border: 3px solid rgb(3, 2, 24);
+  padding: 100px;
+  background-color: azure;
+  color:rgb(3, 2, 24)  ;
+  border-radius: 8px;
+}
+.btn-access{
+  background-color: rgb(236, 123, 16);
+  font-size: x-large;
+  border: 2px solid black;
+  color: whitesmoke;
+  border-radius: 8px;
 }
