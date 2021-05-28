@@ -15,6 +15,7 @@ const cerrarSesion=()=>{
     cookies.remove('username',{path:"/"});
     cookies.remove('phoNumber',{path:"/"});
     window.location.href='./';
+    // history.push("/"); // react way
 }
     
 //ComponentDidMount () {if(cookies.get('username')){window.location.href="../User_Page"}};

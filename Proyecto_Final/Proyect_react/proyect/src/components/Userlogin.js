@@ -1,6 +1,6 @@
 
 import {useState} from 'react';
- import {URL_USERS} from '../setting';
+import {URL_USERS} from '../setting';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 
