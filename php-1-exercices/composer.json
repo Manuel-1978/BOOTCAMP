@@ -1,0 +1,7 @@
+{
+    "name": "manuel/php-1-exercices",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
