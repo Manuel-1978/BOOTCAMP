@@ -9,7 +9,7 @@ app.use(cors());
 
 app.use(require("./routes"));
 
-mongoose.connect("mongodb://localhost:27017/shop", {
+mongoose.connect("mongodb://localhost:27017/users", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

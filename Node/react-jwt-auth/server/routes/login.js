@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
                 process.env.SEED,
                 {expiresIn: 2000}
             );
-
+            console.log(userDB.username,"has logged in!");
             res.status(200).json({ok: true, token, user: userDB});
         }
     })
