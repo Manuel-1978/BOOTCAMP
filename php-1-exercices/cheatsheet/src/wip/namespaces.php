@@ -11,12 +11,12 @@ namespace App\Wip;
 
 // ----------------
 
-require dirname(__DIR__).'/Namespaces/Uno/Clase.php';
-require dirname(__DIR__).'/Namespaces/Dos/Clase.php';
+// require dirname(__DIR__).'/Namespaces/Uno/Clase.php';
+// require dirname(__DIR__).'/Namespaces/Dos/Clase.php';
 
-$clase = new \App\Namespaces\Uno\Clase();
+// $clase = new \App\Namespaces\Uno\Clase();
 
-$clase->haceAlgo();
+// $clase->haceAlgo();
 
 // ----------------
 
