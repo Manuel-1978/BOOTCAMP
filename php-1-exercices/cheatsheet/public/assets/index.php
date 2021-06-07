@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<?php   include("./head.php")  ?>
+<?php require 'partial/head.php'; ?>
 
 <body>
  
-  <?php   include("./links.php")  ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/partial/header.php'; ?>
   
     <?php
     $weeekDays = [
@@ -23,7 +22,7 @@
     ?>
     <h1>Hola, Carlos</h1>
     <p>Hoy es <strong><?= $weeekDays[date('N')]; ?></strong>. ¿Qué tal estás?</p>
-    <script src="/public/main.js"></script>
+    <?php require 'partial/footer.php'; ?>
 </body>
 
 
